@@ -1,0 +1,8 @@
+{
+  "name": "bqr",
+  "private": true,
+  "scripts": {
+    "install-less": "npm install less",
+    "watch-less": "less-watch-compiler src/ src/ --run-once"
+  }
+}

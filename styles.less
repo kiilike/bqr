@@ -1,0 +1,134 @@
+@neutralBlack: #232122;
+@neutralGrey: #808080;
+@neutralLightGrey: #cac7c4;
+@neutralLightGrey2: #ededed;
+@neutralC7: #c7c4ca;
+@neutralF5: #f5f5f5;
+@neutralWhite: #ffffff;
+
+@base-font-size: 14px;
+
+// @neutralBlack: #000000;
+// @neutralGrey: #FFFFFF;
+// @neutralLightGrey: #FF5733;
+// @neutralLightGrey2: #33FF57;
+// @neutralC7: #3357FF;
+// @neutralF5: #FFD700;
+// @neutralWhite: #FF69B4;
+
+@boxshadow1: 0 0 0.714rem 0 rgba(0, 0, 0, 0.1); // 10px equivalent
+
+@bg: @neutralF5;
+@text: @neutralBlack;
+@tile-bg: @neutralWhite;
+
+html {
+    font-size: @base-font-size;
+}
+
+// 38px-43px
+.h1 {
+    letter-spacing: -2%;
+    font-size: 2.714rem; // 38px equivalent
+    line-height: 3.071rem; // 43px equivalent
+    font-weight: 700;
+}
+
+// 28px-33.6px
+.h2 {
+    letter-spacing: -1%;
+    font-size: 2rem; // 28px equivalent
+    line-height: 2.4rem; // 33.6px equivalent
+}
+
+// 20px-24px
+.h3 {
+    letter-spacing: -2%;
+    font-size: 1.429rem; // 20px equivalent
+    line-height: 1.714rem; // 24px equivalent
+}
+
+// 18px-21.78px
+.subh1 {
+    letter-spacing: -2%;
+    font-size: 1.286rem; // 18px equivalent
+    line-height: 1.554rem; // 21.78px equivalent
+}
+
+// 16px-19.36px
+.subh2 {
+    letter-spacing: -1%;
+    font-size: 1.143rem; // 16px equivalent
+    line-height: 1.377rem; // 19.36px equivalent
+}
+
+
+// 12px-14.52px
+.desc {
+    font-size: 0.857rem; // 12px equivalent
+    line-height: 1.036rem; // 14.52px equivalent
+}
+
+// 14px-20px
+html {
+    background-color: @bg;
+    color: @text;
+    font-size: 1rem; // 14px equivalent
+    line-height: 1.429rem; // 20px equivalent
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.143rem; // 16px equivalent
+
+    .section {
+        padding: 1.143rem; // 16px equivalent
+    }
+
+    .tile {
+        background-color: @tile-bg;
+        padding: 1.143rem; // 16px equivalent
+        border-radius: 0.5rem; // 7px equivalent
+        box-shadow: @boxshadow1;
+    }
+}
+
+button {
+    border-radius: 1000px;
+    padding: 20px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.button-primary {
+    background: @neutralBlack;
+    color: @neutralWhite;
+}
+
+// background blur 20
+.button-secondary {
+    border: 1px solid @neutralLightGrey;
+    background: @neutralWhite;
+    box-shadow: @boxshadow1;
+    backdrop-filter: blur(20px); // Add background blur
+    background-color: transparent;
+}
+
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 16px 2px 16px;
+    width: 100%;
+    gap: 20px;
+    background-color: @neutralWhite;
+
+    button {
+        flex-grow: 1;
+    }
+}
