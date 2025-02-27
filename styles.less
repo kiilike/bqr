@@ -6,6 +6,10 @@
 @neutralF5: #f5f5f5;
 @neutralWhite: #ffffff;
 
+@lilac: #8c7dee;
+@lilacLight: #efeefb;
+
+
 @base-font-size: 14px;
 
 // @neutralBlack: #000000;
@@ -16,7 +20,7 @@
 // @neutralF5: #FFD700;
 // @neutralWhite: #FF69B4;
 
-@boxshadow1: 0 0 0.714rem 0 rgba(0, 0, 0, 0.1); // 10px equivalent
+@boxshadow1: 0 0 10px 0 rgba(0, 0, 0, 0.1); // 10px equivalent
 
 @bg: @neutralF5;
 @text: @neutralBlack;
@@ -28,87 +32,141 @@ html {
 
 // 38px-43px
 .h1 {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
     letter-spacing: -2%;
-    font-size: 2.714rem; // 38px equivalent
-    line-height: 3.071rem; // 43px equivalent
+    font-size: 38px; // 2.714rem equivalent
+    line-height: 43px; // 3.071rem equivalent
     font-weight: 700;
 }
 
 // 28px-33.6px
 .h2 {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
     letter-spacing: -1%;
-    font-size: 2rem; // 28px equivalent
-    line-height: 2.4rem; // 33.6px equivalent
+    font-size: 28px; // 2rem equivalent
+    line-height: 33.6px; // 2.4rem equivalent
 }
 
 // 20px-24px
 .h3 {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
     letter-spacing: -2%;
-    font-size: 1.429rem; // 20px equivalent
-    line-height: 1.714rem; // 24px equivalent
+    font-size: 20px; // 1.429rem equivalent
+    line-height: 24px; // 1.714rem equivalent
 }
 
 // 18px-21.78px
 .subh1 {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
     letter-spacing: -2%;
-    font-size: 1.286rem; // 18px equivalent
-    line-height: 1.554rem; // 21.78px equivalent
+    font-size: 18px; // 1.286rem equivalent
+    line-height: 21.78px; // 1.554rem equivalent
 }
 
 // 16px-19.36px
 .subh2 {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
     letter-spacing: -1%;
-    font-size: 1.143rem; // 16px equivalent
-    line-height: 1.377rem; // 19.36px equivalent
+    font-size: 16px; // 1.143rem equivalent
+    line-height: 19.36px; // 1.377rem equivalent
 }
 
-
 // 12px-14.52px
-.desc {
-    font-size: 0.857rem; // 12px equivalent
-    line-height: 1.036rem; // 14.52px equivalent
+.description {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 12px; // 0.857rem equivalent
+    line-height: 14.52px; // 1.036rem equivalent
 }
 
 // 14px-20px
 html {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
     background-color: @bg;
     color: @text;
-    font-size: 1rem; // 14px equivalent
-    line-height: 1.429rem; // 20px equivalent
+    font-size: 14px; // 1rem equivalent
+    line-height: 20px; // 1.429rem equivalent
 }
 
 .main {
     display: flex;
     flex-direction: column;
-    gap: 1.143rem; // 16px equivalent
+    gap: 24px; // 1.143rem equivalent
+    padding: 16px;
 
     .section {
-        padding: 1.143rem; // 16px equivalent
+        &.loyalty-programs {
+            display: flex;
+            flex-direction: column;
+            gap: 8px; // 1.143rem equivalent
+
+            .h3 {
+                color: @lilac;
+            }
+        }
+
+        &.loyalty-card {
+            background-color: @neutralWhite;
+
+            .qr {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 100px;
+            }
+
+            .desc {
+                display: flex;
+                gap: 8px; // 1.143rem equivalent
+                justify-content: space-between;
+                align-items: center;
+                height: 100px;
+
+                .visits,
+                .bussinesses {
+                    padding: 12px
+                }
+            }
+        }
+
     }
+
+
 
     .tile {
         background-color: @tile-bg;
-        padding: 1.143rem; // 16px equivalent
-        border-radius: 0.5rem; // 7px equivalent
-        box-shadow: @boxshadow1;
+        padding: 16px; // 1.143rem equivalent
+        border-radius: 7px; // 0.5rem equivalent
     }
+}
+
+.tile {
+    background-color: @neutralWhite;
+    border-radius: 14px
 }
 
 button {
     border-radius: 1000px;
     padding: 20px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
+    &.selected {
+        background-color: @lilacLight;
+        color: @neutralWhite;
+    }
+}
 
 .button-primary {
     background: @neutralBlack;
     color: @neutralWhite;
 }
 
-// background blur 20
+
 .button-secondary {
     border: 1px solid @neutralLightGrey;
     background: @neutralWhite;
@@ -122,14 +180,39 @@ button {
     position: fixed;
     bottom: 0;
     left: 0;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 16px 2px 16px;
     width: 100%;
-    gap: 20px;
     background-color: @neutralWhite;
 
+    &-content {
+        display: flex;
+        justify-content: space-between; // Ensure items are in one row
+        padding: 10px 16px 5px 16px; // 0.714rem equivalent
+        gap: 20px;
+
+        &-item {
+            flex: 1; // Ensure all items have the same width
+            display: flex;
+            justify-content: center;
+        }
+    }
+
     button {
-        flex-grow: 1;
+        display: flex;
+        min-width: 44px;
+        padding: 12px 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        border-radius: 1000px;
+        border: 0;
+        width: 100%;
+        background-color: transparent;
+        color: @neutralBlack;
+        font-weight: 600;
+
+        &.selected {
+            background-color: @lilacLight;
+            color: @lilac;
+        }
     }
 }
