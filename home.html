@@ -4,13 +4,8 @@
 <link rel="stylesheet" type="text/css" href="styles.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-    rel="stylesheet">
 <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-    rel="stylesheet">
-<link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
     rel="stylesheet">
 
 <head>
@@ -22,6 +17,7 @@
     <input type="checkbox" id="navbar" class="navbar-checkbox" />
     <div class="navbar">
         <div class="navbar-icon">
+
             <label for="navbar" class="icon-button">
                 <img id="navbar-hamburger" src="images/hamburger.svg" alt="menu" width="24" height="24">
                 <img id="navbar-close" src="images/x-close.svg" alt="menu" width="24" height="24">
@@ -29,29 +25,84 @@
         </div>
 
         <div class="navbar-content">
-            <div>A</div>
-            <div>B</div>
-            <div>C</div>
-            <div>D</div>
-            <div>A</div>
-            <div>B</div>
-            <div>C</div>
-            <div>D</div>
-            <div>A</div>
-            <div>B</div>
-            <div>C</div>
-            <div>D</div>
-            <div>A</div>
-            <div>B</div>
-            <div>C</div>
-            <div>D</div>
-            <div>A</div>
-            <div>B</div>
-            <div>C</div>
-            <div>D</div>
+            <div class="logo-container">
+                <img src="images/logo.svg" alt="logo" width="32" height="32">
+                <div>BONUS QR</div>
+            </div>
+
+
+            <div class="navbar-register">
+                <div class="h2-bold">Register or login</div>
+                <div>
+                    Register or login and enjoy the full potential of our loyalty programm
+                </div>
+                <div class="register-socials">
+                    <button onclick="console.log('register-google clicked');">
+                        <img src="images/flat-color-icons_google.svg" alt="google" width="20" height="20">
+                    </button>
+                    <button onclick="console.log('register-apple clicked');">
+                        <img src="images/ic_baseline-apple.svg" alt="apple" width="20" height="20">
+                    </button>
+                    <button onclick="console.log('register-email clicked');">
+                        <img src="images/mail-01.svg" alt="email" width="20" height="20">
+                    </button>
+
+                </div>
+            </div>
+
+
+            <div class="menu">
+                <div class="desc menu-label">
+                    Menu
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-title">
+                        <img src="images/home.svg" alt="home" width="20" height="20">
+                        <div class="menu-item-title-text">Home</div>
+                    </div>
+                    <div>
+                        <img src="images/dot.svg" alt="arrow" width="5" height="5">
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-title">
+                        <img src="images/map.svg" alt="home" width="20" height="20">
+                        <div class="menu-item-title-text">Businesses</div>
+                    </div>
+                    <div>
+                        <img src="images/dot.svg" alt="arrow" width="5" height="5">
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-title">
+                        <img src="images/user.svg" alt="home" width="20" height="20">
+                        <div class="menu-item-title-text">Profile</div>
+                    </div>
+                    <div>
+                        <img src="images/dot.svg" alt="arrow" width="5" height="5">
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="menu">
+                <div class="desc menu-label">
+                    Language
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-title">
+                        <img src="images/globe.svg" alt="home" width="20" height="20">
+                        <div class="menu-item-title-text">English</div>
+                    </div>
+                    <div>
+                        <img src="images/dot.svg" alt="arrow" width="5" height="5">
+                    </div>
+                </div>
+            </div>
+
+
         </div>
-
-
     </div>
 
     <div class="main">
@@ -60,10 +111,10 @@
         <div class="section register">
             <div class="h3">Register or login via</div>
             <div class="register-socials">
-                <button onclick="console.log('register-facebook clicked');">
+                <button onclick="console.log('register-google clicked');">
                     <img src="images/flat-color-icons_google.svg" alt="google" width="20" height="20">
                 </button>
-                <button onclick="console.log('register-google clicked');">
+                <button onclick="console.log('register-apple clicked');">
                     <img src="images/ic_baseline-apple.svg" alt="apple" width="20" height="20">
                 </button>
                 <button onclick="console.log('register-email clicked');">

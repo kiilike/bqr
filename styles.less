@@ -115,36 +115,102 @@ body {
 .navbar {
     position: relative;
     width: 100%;
-    z-index: 1; // Ensure .navbar is above other content
-}
+    z-index: 1;
 
-.navbar-icon {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    background-color: @neutralF5;
-    position: relative;
-    z-index: 2;
+    .logo-container {
+        padding: 16px 8px 0 16px;
+        font-family: Gabarito;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.2px;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: @lilac;
+    }
 
-    label {
-        padding: 16px;
+    .navbar-icon {
         display: flex;
         justify-content: end;
         align-items: center;
-    }
-}
+        background-color: @neutralF5;
+        position: fixed;
+        z-index: 3;
+        right: 0;
+        top: 0;
 
-.navbar-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: @neutralLightGrey;
-    transition: transform 0.2s ease-in-out;
-    transform: translateY(-100%);
-    height: auto;
-    overflow: hidden;
-    z-index: 1;
+        label {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+    }
+
+    .navbar-content {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: @neutralF5;
+        transition: transform 0.4s ease-in-out;
+        transform: translateY(-100%);
+        height: auto;
+        overflow: hidden;
+        z-index: 2;
+        height: 100vh;
+    }
+
+    .navbar-register {
+        margin: 24px 16px 8px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .register-socials {
+        margin-top: 16px;
+    }
+
+    .menu {
+        margin-top: 40px;
+    }
+
+    .menu-label {
+        padding-left: 16px;
+        color: @neutralGrey;
+    }
+
+    .menu-item {
+        padding: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+        border-bottom: 1px solid @neutralLightGrey2;
+    }
+
+    .menu .menu-item:nth-last-of-type(1) {
+        border-bottom: 0;
+    }
+
+    .menu-item-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .menu-item-title-text {
+        line-height: 14px;
+    }
 }
 
 .navbar-checkbox {
@@ -161,7 +227,6 @@ body {
 }
 
 .navbar-checkbox:checked ~ .navbar #navbar-hamburger {
-
     display: none;
 }
 
@@ -170,19 +235,46 @@ body {
 }
 
 .navbar-checkbox:checked ~ .navbar #navbar-close {
-    display: block;
+    display: flex;
+}
+
+.navbar-checkbox:checked ~ .navbar .logo-container {
+    visibility: visible;
 }
 
 .navbar-checkbox:not(:checked) ~ .navbar #navbar-close {
-
     display: none;
+}
+
+.navbar-checkbox:not(:checked) ~ .navbar .logo-container {
+    visibility: hidden;
+}
+
+.register-socials {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+
+    button {
+        flex: 1;
+        background-color: @neutralWhite;
+        display: flex;
+        border: 0;
+        flex-direction: column;
+        gap: 8px;
+        border-radius: 8px;
+        padding: 12px;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .main {
     display: flex;
     flex-direction: column;
     gap: 24px; // 1.143rem equivalent
-    padding: 0 16px 64px 16px;
+    padding: 48px 16px 64px 16px;
 
     .section {
 
@@ -191,25 +283,7 @@ body {
             flex-direction: column;
             gap: 16px; // 1.143rem equivalent
 
-            .register-socials {
-                display: flex;
-                gap: 8px;
-                justify-content: center; // Center tiles horizontally
-                align-items: center; // Center tiles vertically
 
-                button {
-                    flex: 1;
-                    background-color: @neutralWhite;
-                    display: flex;
-                    border: 0;
-                    flex-direction: column;
-                    gap: 8px; // 1.143rem equivalent
-                    border-radius: 8px;
-                    padding: 12px;
-                    justify-content: center; // Center content vertically
-                    align-items: center; // Center content horizontally
-                }
-            }
 
             .tile {
                 flex: 1; // Ensure all tiles have the same width
