@@ -1,10 +1,21 @@
 # bqr
 
----
+## Styles
 
-STYLES
+To install Less globally:
+
+```sh
 npm install -g less
-lessc styles.less styles.css
-npx nodemon --ext less --exec "lessc styles.less styles.css"
+```
 
----
+To compile `styles.less` to `styles.css`:
+
+```sh
+lessc styles.less styles.css
+```
+
+To watch `.less` files and compile them automatically:
+
+```sh
+npx nodemon --ext less --exec "lessc styles.less styles.css"
+```
