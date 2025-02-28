@@ -67,15 +67,45 @@ body {
   margin: 0;
 }
 .navbar {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+.navbar-icon {
   display: flex;
   justify-content: end;
   align-items: center;
+  background-color: #f5f5f5;
+  position: relative;
+  z-index: 2;
 }
-.navbar-icon {
+.navbar-icon label {
   padding: 16px;
   display: flex;
   justify-content: end;
   align-items: center;
+}
+.navbar-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #cac7c4;
+  transition: transform 0.2s ease-in-out;
+  transform: translateY(-100%);
+  height: auto;
+  overflow: hidden;
+  z-index: 1;
+}
+.navbar-checkbox {
+  height: 0;
+  position: absolute;
+}
+.navbar-checkbox:checked ~ .navbar .navbar-content {
+  transform: translateY(0);
+}
+.navbar-checkbox:not(:checked) ~ .navbar .navbar-content {
+  transform: translateY(-100%);
 }
 .main {
   display: flex;
