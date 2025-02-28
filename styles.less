@@ -31,8 +31,9 @@ html {
 }
 
 // 38px-43px
-.h1 {
-    font-family: "Open Sans", sans-serif;
+.h1,
+h1-bold {
+    font-family: "Lato", "Open Sans", sans-serif;
     font-optical-sizing: auto;
     letter-spacing: -2%;
     font-size: 38px; // 2.714rem equivalent
@@ -41,8 +42,9 @@ html {
 }
 
 // 28px-33.6px
-.h2 {
-    font-family: "Open Sans", sans-serif;
+.h2,
+.h2-bold {
+    font-family: "Lato", "Open Sans", sans-serif;
     font-optical-sizing: auto;
     letter-spacing: -1%;
     font-size: 28px; // 2rem equivalent
@@ -50,12 +52,19 @@ html {
 }
 
 // 20px-24px
-.h3 {
-    font-family: "Open Sans", sans-serif;
+.h3,
+.h3-bold {
+    font-family: "Lato", "Open Sans", sans-serif;
     font-optical-sizing: auto;
     letter-spacing: -2%;
     font-size: 20px; // 1.429rem equivalent
     line-height: 24px; // 1.714rem equivalent
+}
+
+.h1-bold,
+.h2-bold,
+.h3-bold {
+    font-weight: 700;
 }
 
 // 18px-21.78px
@@ -84,6 +93,10 @@ html {
     line-height: 14.52px; // 1.036rem equivalent
 }
 
+.text {
+    color: @neutralGrey;
+}
+
 // 14px-20px
 html {
     font-family: "Inter", sans-serif;
@@ -94,13 +107,67 @@ html {
     line-height: 20px; // 1.429rem equivalent
 }
 
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    &-icon {
+        padding: 16px;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+}
+
+
 .main {
     display: flex;
     flex-direction: column;
     gap: 24px; // 1.143rem equivalent
-    padding: 16px;
+    padding: 0 16px 64px 16px;
 
     .section {
+
+        &.register {
+            display: flex;
+            flex-direction: column;
+            gap: 16px; // 1.143rem equivalent
+
+            .register-socials {
+                display: flex;
+                gap: 8px;
+                justify-content: center; // Center tiles horizontally
+                align-items: center; // Center tiles vertically
+
+                button {
+                    flex: 1;
+                    background-color: @neutralWhite;
+                    display: flex;
+                    border: 0;
+                    flex-direction: column;
+                    gap: 8px; // 1.143rem equivalent
+                    border-radius: 8px;
+                    padding: 12px;
+                    justify-content: center; // Center content vertically
+                    align-items: center; // Center content horizontally
+                }
+            }
+
+            .tile {
+                flex: 1; // Ensure all tiles have the same width
+                display: flex;
+                flex-direction: column;
+                gap: 8px; // 1.143rem equivalent
+
+            }
+        }
+
         &.loyalty-programs {
             display: flex;
             flex-direction: column;
@@ -112,37 +179,52 @@ html {
         }
 
         &.loyalty-card {
-            background-color: @neutralWhite;
+            display: flex;
+            gap: 8px;
+            flex-direction: column;
 
             .qr {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                height: 100px;
+                gap: 16px;
+
+                &-desc {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                }
             }
 
             .desc {
                 display: flex;
-                gap: 8px; // 1.143rem equivalent
+                gap: 8px; // 8px gap between .BA and .BB
                 justify-content: space-between;
                 align-items: center;
-                height: 100px;
 
                 .visits,
-                .bussinesses {
-                    padding: 12px
+                .businesses {
+                    padding: 12px;
+                    flex: 1; // Ensure .BA and .BB have the same width
+                    display: flex;
+                    gap: 12px;
+                    flex-direction: column;
+                    justify-content: center; // Center content vertically
+                    align-items: center; // Center content horizontally
                 }
+            }
+
+            .show-businesses {
+                margin-top: 16px;
             }
         }
 
     }
 
-
-
     .tile {
         background-color: @tile-bg;
-        padding: 16px; // 1.143rem equivalent
-        border-radius: 7px; // 0.5rem equivalent
+        padding: 8px;
+        border-radius: 14px;
     }
 }
 
@@ -152,12 +234,24 @@ html {
 }
 
 button {
-    border-radius: 1000px;
-    padding: 20px;
+    &.default {
+        border-radius: 1000px;
+        padding: 20px;
+        border: 1px solid @neutralLightGrey;
+        background-color: @neutralF5;
+        backdrop-filter: blur(10px);
+        width: 100%;
+        font-weight: 700;
 
-    &.selected {
-        background-color: @lilacLight;
-        color: @neutralWhite;
+        &.selected {
+            background-color: @lilacLight;
+            color: @neutralWhite;
+        }
+    }
+
+    &.icon-button {
+        background-color: transparent;
+        border: 0;
     }
 }
 

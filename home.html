@@ -9,6 +9,9 @@
 <link
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
     rel="stylesheet">
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
 
 <head>
     <title>Home</title>
@@ -16,11 +19,33 @@
 </head>
 
 <body>
-    <div class="main">
-        <div>
-
-            <div class="h1">The best discounts and VIP offers at your businesses</div>
+    <div class="navbar">
+        <div class="navbar-icon">
+            <button class="icon-button" onclick="console.log('navbar home clicked');">
+                <img src="images/hamburger.svg" alt="google" width="24" height="24">
+            </button>
         </div>
+    </div>
+
+    <div class="main">
+        <div class="h1">The best discounts and VIP offers at your businesses</div>
+
+        <div class="section register">
+            <div class="h3">Register or login via</div>
+            <div class="register-socials">
+                <button onclick="console.log('register-facebook clicked');">
+                    <img src="images/flat-color-icons_google.svg" alt="google" width="20" height="20">
+                </button>
+                <button onclick="console.log('register-google clicked');">
+                    <img src="images/ic_baseline-apple.svg" alt="apple" width="20" height="20">
+                </button>
+                <button onclick="console.log('register-email clicked');">
+                    <img src="images/mail-01.svg" alt="email" width="20" height="20">
+                </button>
+
+            </div>
+        </div>
+
         <div class="section loyalty-programs">
             <div class="h3">Loyalty programs</div>
             <div>Join the loyalty programs of your favourite businesses and get an immediate overview of discounts and
@@ -29,31 +54,42 @@
 
         <div class="section loyalty-card">
             <div class="tile qr">
-                <div class="qr-image">a</div>
-                <div class="qr-desc">b</div>
+                <div class="qr-image">
+                    <img width="177" height="177" src="https://dummyimage.com/177x177/999/fff" alt="qr" />
+                </div>
+                <div class="qr-desc">
+                    <div class="h3-bold">Your loyalty QR</div>
+                    <div class="text">Show everytime you pay to get a discount</div>
+                </div>
             </div>
             <div class="desc">
-                <div class="tile visits">c</div>
-                <div class="tile businesses">d</div>
+                <div class="tile visits">
+                    <div class="h1">23</div>
+                    <div class="desc">Visits</div>
+                </div>
+                <div class="tile businesses">
+                    <div class="h1">4</div>
+                    <div class="desc">Businesses</div>
+                </div>
             </div>
 
+            <div class="show-businesses">
+                <button class="default" onclick="console.log('show-businesses clicked');">Show businesses</button>
+            </div>
         </div>
-
-
-
     </div>
 
 
     <div class="footer">
         <div class="footer-content">
             <div class="footer-content-item">
-                <button class="selected">HOME</button>
+                <button class="selected" onclick="console.log('footer home clicked');">HOME</button>
             </div>
             <div class="footer-content-item">
-                <button>BUSINESS</button>
+                <button onclick="console.log('footer business clicked');">BUSINESS</button>
             </div>
             <div class="footer-content-item">
-                <button>LEFT</button>
+                <button onclick="console.log('footer profile clicked');">PROFILE</button>
             </div>
 
         </div>
