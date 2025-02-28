@@ -107,6 +107,18 @@ body {
 .navbar-checkbox:not(:checked) ~ .navbar .navbar-content {
   transform: translateY(-100%);
 }
+.navbar-checkbox:checked ~ .navbar #navbar-hamburger {
+  display: none;
+}
+.navbar-checkbox:not(:checked) ~ .navbar #navbar-hamburger {
+  display: block;
+}
+.navbar-checkbox:checked ~ .navbar #navbar-close {
+  display: block;
+}
+.navbar-checkbox:not(:checked) ~ .navbar #navbar-close {
+  display: none;
+}
 .main {
   display: flex;
   flex-direction: column;
