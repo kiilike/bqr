@@ -126,6 +126,9 @@ label.icon-button {
   flex-direction: column;
   gap: 8px;
 }
+.register-socials {
+  margin-top: 16px;
+}
 .menu {
   margin-top: 40px;
 }
@@ -319,8 +322,8 @@ label.icon-button {
   width: 100%;
 }
 /**
-* DEMO PURPOUSES
-*/
+ * DEMO
+ */
 .navbar-checkbox {
   height: 0;
   position: absolute;

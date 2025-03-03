@@ -11,7 +11,7 @@
 
 @base-font-size: 14px;
 
-@boxshadow1: 0 0 10px 0 rgba(0, 0, 0, 0.1); // 10px equivalent
+@boxshadow1: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 
 @bg: @neutralF5;
 @text: @neutralBlack;
@@ -21,35 +21,32 @@ html {
     font-size: @base-font-size;
 }
 
-// 38px-43px
 .h1,
 h1-bold {
     font-family: "Lato", "Open Sans", sans-serif;
     font-optical-sizing: auto;
     letter-spacing: -2%;
-    font-size: 38px; // 2.714rem equivalent
-    line-height: 43px; // 3.071rem equivalent
+    font-size: 38px;
+    line-height: 43px;
     font-weight: 700;
 }
 
-// 28px-33.6px
 .h2,
 .h2-bold {
     font-family: "Lato", "Open Sans", sans-serif;
     font-optical-sizing: auto;
     letter-spacing: -1%;
-    font-size: 28px; // 2rem equivalent
-    line-height: 33.6px; // 2.4rem equivalent
+    font-size: 28px;
+    line-height: 33.6px;
 }
 
-// 20px-24px
 .h3,
 .h3-bold {
     font-family: "Lato", "Open Sans", sans-serif;
     font-optical-sizing: auto;
     letter-spacing: -2%;
-    font-size: 20px; // 1.429rem equivalent
-    line-height: 24px; // 1.714rem equivalent
+    font-size: 20px;
+    line-height: 24px;
 }
 
 .h1-bold,
@@ -58,52 +55,46 @@ h1-bold {
     font-weight: 700;
 }
 
-// 18px-21.78px
 .subh1 {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     letter-spacing: -2%;
-    font-size: 18px; // 1.286rem equivalent
-    line-height: 21.78px; // 1.554rem equivalent
+    font-size: 18px;
+    line-height: 21.78px;
 }
 
-// 16px-19.36px
 .subh2 {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     letter-spacing: -1%;
-    font-size: 16px; // 1.143rem equivalent
-    line-height: 19.36px; // 1.377rem equivalent
+    font-size: 16px;
+    line-height: 19.36px;
 }
 
-// 12px-14.52px
 .description {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    font-size: 12px; // 0.857rem equivalent
-    line-height: 14.52px; // 1.036rem equivalent
+    font-size: 12px;
+    line-height: 14.52px;
 }
 
 .text {
     color: @neutralGrey;
 }
 
-// 14px-20px
 html {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     background-color: @bg;
     color: @text;
-    font-size: 14px; // 1rem equivalent
-    line-height: 20px; // 1.429rem equivalent
+    font-size: 14px;
+    line-height: 20px;
 }
 
 body {
     padding: 0;
     margin: 0;
 }
-
-
 
 .logo-container {
     margin-left: 16px;
@@ -129,7 +120,6 @@ body {
     z-index: 3;
     right: 0;
     top: 0;
-
 }
 
 label.icon-button {
@@ -173,6 +163,9 @@ label.icon-button {
     gap: 8px;
 }
 
+.register-socials {
+    margin-top: 16px;
+}
 
 .menu {
     margin-top: 40px;
@@ -207,7 +200,6 @@ label.icon-button {
     line-height: 14px;
 }
 
-
 .register-socials {
     display: flex;
     gap: 8px;
@@ -231,7 +223,7 @@ label.icon-button {
 .main {
     display: flex;
     flex-direction: column;
-    gap: 24px; // 1.143rem equivalent
+    gap: 24px;
     padding: 16px 16px 82px 16px;
 
     .main-header-wrapper {
@@ -244,23 +236,20 @@ label.icon-button {
         &.register {
             display: flex;
             flex-direction: column;
-            gap: 16px; // 1.143rem equivalent
-
-
+            gap: 16px;
 
             .tile {
-                flex: 1; // Ensure all tiles have the same width
+                flex: 1;
                 display: flex;
                 flex-direction: column;
-                gap: 8px; // 1.143rem equivalent
-
+                gap: 8px;
             }
         }
 
         &.loyalty-programs {
             display: flex;
             flex-direction: column;
-            gap: 8px; // 1.143rem equivalent
+            gap: 8px;
 
             .h3 {
                 color: @lilac;
@@ -287,19 +276,19 @@ label.icon-button {
 
             .desc {
                 display: flex;
-                gap: 8px; // 8px gap between .BA and .BB
+                gap: 8px;
                 justify-content: space-between;
                 align-items: center;
 
                 .visits,
                 .businesses {
                     padding: 12px;
-                    flex: 1; // Ensure .BA and .BB have the same width
+                    flex: 1;
                     display: flex;
                     gap: 12px;
                     flex-direction: column;
-                    justify-content: center; // Center content vertically
-                    align-items: center; // Center content horizontally
+                    justify-content: center;
+                    align-items: center;
                 }
             }
 
@@ -307,7 +296,6 @@ label.icon-button {
                 margin-top: 16px;
             }
         }
-
     }
 
     .tile {
@@ -319,7 +307,7 @@ label.icon-button {
 
 .tile {
     background-color: @neutralWhite;
-    border-radius: 14px
+    border-radius: 14px;
 }
 
 .button-default {
@@ -342,12 +330,11 @@ label.icon-button {
     color: @neutralWhite;
 }
 
-
 .button-secondary {
     border: 1px solid @neutralLightGrey;
     background: @neutralWhite;
     box-shadow: @boxshadow1;
-    backdrop-filter: blur(20px); // Add background blur
+    backdrop-filter: blur(20px);
     background-color: transparent;
 }
 
@@ -360,12 +347,12 @@ label.icon-button {
 
     &-content {
         display: flex;
-        justify-content: space-between; // Ensure items are in one row
-        padding: 10px 16px 5px 16px; // 0.714rem equivalent
+        justify-content: space-between;
+        padding: 10px 16px 5px 16px;
         gap: 20px;
 
         &-item {
-            flex: 1; // Ensure all items have the same width
+            flex: 1;
             display: flex;
             justify-content: center;
         }
@@ -409,10 +396,11 @@ label.icon-button {
     width: 100%;
 }
 
-
 /**
-* DEMO PURPOUSES
-*/
+ * DEMO
+ */
+
+
 
 .navbar-checkbox {
     height: 0;
