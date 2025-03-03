@@ -66,13 +66,8 @@ body {
   padding: 0;
   margin: 0;
 }
-.navbar {
-  position: relative;
-  width: 100%;
-  z-index: 1;
-}
-.navbar .logo-container {
-  padding: 16px 8px 0 16px;
+.logo-container {
+  margin-left: 16px;
   font-family: Gabarito;
   font-size: 20px;
   font-style: normal;
@@ -85,26 +80,33 @@ body {
   gap: 8px;
   color: #8c7dee;
 }
-.navbar .navbar-icon {
+.navbar-icon {
   display: flex;
   justify-content: end;
   align-items: center;
   background-color: #f5f5f5;
-  position: fixed;
+  position: absolute;
   z-index: 3;
   right: 0;
   top: 0;
 }
-.navbar .navbar-icon label {
+label.icon-button {
   position: absolute;
   z-index: 1;
   top: 0;
-  padding: 20px;
+}
+.icon-button {
+  padding: 16px;
   display: flex;
   justify-content: end;
   align-items: center;
 }
-.navbar .navbar-content {
+.navbar-content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-content {
   position: fixed;
   top: 0;
   left: 0;
@@ -117,24 +119,21 @@ body {
   z-index: 2;
   height: 100vh;
 }
-.navbar .navbar-register {
+.navbar-register {
   margin: 24px 16px 8px;
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.navbar .register-socials {
-  margin-top: 16px;
-}
-.navbar .menu {
+.menu {
   margin-top: 40px;
 }
-.navbar .menu-label {
+.menu-label {
   padding-left: 16px;
   color: #808080;
 }
-.navbar .menu-item {
+.menu-item {
   padding: 16px;
   display: flex;
   justify-content: space-between;
@@ -142,45 +141,17 @@ body {
   list-style-type: none;
   border-bottom: 1px solid #ededed;
 }
-.navbar .menu .menu-item:nth-last-of-type(1) {
+.menu .menu-item:nth-last-of-type(1) {
   border-bottom: 0;
 }
-.navbar .menu-item-title {
+.menu-item-title {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
 }
-.navbar .menu-item-title-text {
+.menu-item-title-text {
   line-height: 14px;
-}
-.navbar-checkbox {
-  height: 0;
-  position: absolute;
-}
-.navbar-checkbox:checked ~ .navbar .navbar-content {
-  transform: translateY(0);
-}
-.navbar-checkbox:not(:checked) ~ .navbar .navbar-content {
-  transform: translateY(-100%);
-}
-.navbar-checkbox:checked ~ .navbar #navbar-hamburger {
-  display: none;
-}
-.navbar-checkbox:not(:checked) ~ .navbar #navbar-hamburger {
-  display: block;
-}
-.navbar-checkbox:checked ~ .navbar #navbar-close {
-  display: flex;
-}
-.navbar-checkbox:checked ~ .navbar .logo-container {
-  visibility: visible;
-}
-.navbar-checkbox:not(:checked) ~ .navbar #navbar-close {
-  display: none;
-}
-.navbar-checkbox:not(:checked) ~ .navbar .logo-container {
-  visibility: hidden;
 }
 .register-socials {
   display: flex;
@@ -188,7 +159,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.register-socials button {
+.register-socials .button {
   flex: 1;
   background-color: #ffffff;
   display: flex;
@@ -204,7 +175,11 @@ body {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding: 48px 16px 64px 16px;
+  padding: 16px 16px 82px 16px;
+}
+.main .main-header-wrapper {
+  display: flex;
+  justify-content: end;
 }
 .main .section.register {
   display: flex;
@@ -269,7 +244,7 @@ body {
   background-color: #ffffff;
   border-radius: 14px;
 }
-button.default {
+.button-default {
   border-radius: 1000px;
   padding: 20px;
   border: 1px solid #cac7c4;
@@ -278,13 +253,9 @@ button.default {
   width: 100%;
   font-weight: 700;
 }
-button.default.selected {
+.button-default.selected {
   background-color: #efeefb;
   color: #ffffff;
-}
-button.icon-button {
-  background-color: transparent;
-  border: 0;
 }
 .button-primary {
   background: #232122;
@@ -315,7 +286,7 @@ button.icon-button {
   display: flex;
   justify-content: center;
 }
-.footer button {
+.footer .button {
   display: flex;
   min-width: 44px;
   padding: 12px 20px;
@@ -329,7 +300,59 @@ button.icon-button {
   color: #232122;
   font-weight: 600;
 }
-.footer button.selected {
+.footer .button svg {
+  display: none;
+}
+.footer .button.selected {
   background-color: #efeefb;
   color: #8c7dee;
+}
+.footer .button.selected svg {
+  stroke: #8c7dee;
+  display: block;
+}
+.language-content {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  background-color: red;
+  width: 100%;
+}
+/**
+* DEMO PURPOUSES
+*/
+.navbar-checkbox {
+  height: 0;
+  position: absolute;
+}
+.navbar-checkbox:checked ~ .navbar .navbar-content {
+  transform: translateY(0);
+}
+.navbar-checkbox:not(:checked) ~ .navbar .navbar-content {
+  transform: translateY(-100%);
+}
+.navbar-checkbox:checked ~ .main #navbar-hamburger,
+.navbar-checkbox:checked ~ .navbar #navbar-hamburger {
+  display: none;
+}
+.navbar-checkbox:not(:checked) ~ .navbar #navbar-hamburger {
+  display: block;
+}
+.navbar-checkbox:checked ~ .navbar #navbar-close {
+  display: flex;
+}
+.navbar-checkbox:not(:checked) ~ .navbar #navbar-close {
+  display: none;
+}
+.navbar-checkbox:checked ~ .navbar .logo-container {
+  visibility: visible;
+}
+.navbar-checkbox:not(:checked) ~ .navbar .logo-container {
+  visibility: hidden;
+}
+.navbar-checkbox:checked ~ .navbar .navbar-icon {
+  position: fixed;
+}
+.navbar-checkbox:not(:checked) ~ .navbar .icon-button {
+  position: absolute;
 }
