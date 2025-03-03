@@ -126,9 +126,6 @@ label.icon-button {
   flex-direction: column;
   gap: 8px;
 }
-.register-socials {
-  margin-top: 16px;
-}
 .menu {
   margin-top: 40px;
 }
@@ -304,6 +301,10 @@ label.icon-button {
   font-weight: 600;
 }
 .footer .button svg {
+  display: block;
+  stroke: #232122;
+}
+.footer .button .button-label {
   display: none;
 }
 .footer .button.selected {
@@ -312,18 +313,52 @@ label.icon-button {
 }
 .footer .button.selected svg {
   stroke: #8c7dee;
+}
+.footer .button.selected .button-label {
   display: block;
 }
 .language-content {
-  display: none;
   position: fixed;
   bottom: 0;
-  background-color: red;
   width: 100%;
+  background-color: #f5f5f5;
+  border-radius: 16px 16px 0 0;
+  padding-top: 8px;
+}
+.language-content .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.language-content .menu:first-of-type {
+  margin-top: 0;
+}
+.language-content .menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.language-content .menu-label {
+  padding: 16px;
+}
+.language-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+.language-content .menu-items {
+  max-height: 400px;
+  overflow-y: scroll;
 }
 /**
- * DEMO
- */
+* DEMO PURPOUSES
+*/
 .navbar-checkbox {
   height: 0;
   position: absolute;
