@@ -11,7 +11,8 @@
 
 @base-font-size: 14px;
 
-@boxshadow1: 0 0 10px 0 rgba(0, 0, 0, 0.1); // 10px equivalent
+@boxshadow1: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+@boxshadow2: 0px 601px 168px 0px rgba(0, 0, 0, 0.00), 0px 385px 154px 0px rgba(0, 0, 0, 0.01), 0px 216px 130px 0px rgba(0, 0, 0, 0.04), 0px 96px 96px 0px rgba(0, 0, 0, 0.06), 0px 24px 53px 0px rgba(0, 0, 0, 0.07);
 
 @bg: @neutralF5;
 @text: @neutralBlack;
@@ -228,11 +229,15 @@ label.icon-button {
     }
 }
 
-.main {
+.section {
+    margin: 0 16px;
+}
+
+.home {
     display: flex;
     flex-direction: column;
     gap: 24px; // 1.143rem equivalent
-    padding: 16px 16px 82px 16px;
+    padding: 16px 0 82px;
 
     .main-header-wrapper {
         display: flex;
@@ -458,6 +463,28 @@ label.icon-button {
     overflow-y: scroll;
 }
 
+input {
+    background-color: @neutralWhite;
+    border-radius: 12px;
+    box-shadow: @boxshadow2;
+}
+
+.businesses {
+    .searchnav {
+        display: flex;
+        margin: 16px 16px 0;
+    }
+
+    input.search {
+        background-color: @neutralWhite;
+        border-radius: 12px;
+        box-shadow: @boxshadow2;
+    }
+
+}
+
+
+
 
 /**
 * DEMO PURPOUSES
@@ -476,7 +503,7 @@ label.icon-button {
     transform: translateY(-100%);
 }
 
-.navbar-checkbox:checked ~ .main #navbar-hamburger,
+.navbar-checkbox:checked ~ .home #navbar-hamburger,
 .navbar-checkbox:checked ~ .navbar #navbar-hamburger {
     display: none;
 }

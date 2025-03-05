@@ -171,59 +171,62 @@ label.icon-button {
   justify-content: center;
   align-items: center;
 }
-.main {
+.section {
+  margin: 0 16px;
+}
+.home {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding: 16px 16px 82px 16px;
+  padding: 16px 0 82px;
 }
-.main .main-header-wrapper {
+.home .main-header-wrapper {
   display: flex;
   justify-content: end;
 }
-.main .section.register {
+.home .section.register {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-.main .section.register .tile {
+.home .section.register .tile {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.main .section.loyalty-programs {
+.home .section.loyalty-programs {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.main .section.loyalty-programs .h3 {
+.home .section.loyalty-programs .h3 {
   color: #8c7dee;
 }
-.main .section.loyalty-card {
+.home .section.loyalty-card {
   display: flex;
   gap: 8px;
   flex-direction: column;
 }
-.main .section.loyalty-card .qr {
+.home .section.loyalty-card .qr {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 16px;
 }
-.main .section.loyalty-card .qr-desc {
+.home .section.loyalty-card .qr-desc {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.main .section.loyalty-card .desc {
+.home .section.loyalty-card .desc {
   display: flex;
   gap: 8px;
   justify-content: space-between;
   align-items: center;
 }
-.main .section.loyalty-card .desc .visits,
-.main .section.loyalty-card .desc .businesses {
+.home .section.loyalty-card .desc .visits,
+.home .section.loyalty-card .desc .businesses {
   padding: 12px;
   flex: 1;
   display: flex;
@@ -232,10 +235,10 @@ label.icon-button {
   justify-content: center;
   align-items: center;
 }
-.main .section.loyalty-card .show-businesses {
+.home .section.loyalty-card .show-businesses {
   margin-top: 16px;
 }
-.main .tile {
+.home .tile {
   background-color: #ffffff;
   padding: 8px;
   border-radius: 14px;
@@ -356,6 +359,20 @@ label.icon-button {
   max-height: 400px;
   overflow-y: scroll;
 }
+input {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 601px 168px 0px rgba(0, 0, 0, 0), 0px 385px 154px 0px rgba(0, 0, 0, 0.01), 0px 216px 130px 0px rgba(0, 0, 0, 0.04), 0px 96px 96px 0px rgba(0, 0, 0, 0.06), 0px 24px 53px 0px rgba(0, 0, 0, 0.07);
+}
+.businesses .searchnav {
+  display: flex;
+  margin: 16px 16px 0;
+}
+.businesses input.search {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 601px 168px 0px rgba(0, 0, 0, 0), 0px 385px 154px 0px rgba(0, 0, 0, 0.01), 0px 216px 130px 0px rgba(0, 0, 0, 0.04), 0px 96px 96px 0px rgba(0, 0, 0, 0.06), 0px 24px 53px 0px rgba(0, 0, 0, 0.07);
+}
 /**
 * DEMO PURPOUSES
 */
@@ -369,7 +386,7 @@ label.icon-button {
 .navbar-checkbox:not(:checked) ~ .navbar .navbar-content {
   transform: translateY(-100%);
 }
-.navbar-checkbox:checked ~ .main #navbar-hamburger,
+.navbar-checkbox:checked ~ .home #navbar-hamburger,
 .navbar-checkbox:checked ~ .navbar #navbar-hamburger {
   display: none;
 }
