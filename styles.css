@@ -94,11 +94,11 @@ label.icon-button {
   position: absolute;
   z-index: 1;
   top: 0;
+  justify-content: end;
 }
 .icon-button {
   padding: 16px;
   display: flex;
-  justify-content: end;
   align-items: center;
 }
 .navbar-content-header {
@@ -353,25 +353,87 @@ label.icon-button {
   height: 100%;
   backdrop-filter: blur(6px);
   background-color: rgba(0, 0, 0, 0.7);
-  z-index: 1;
+  z-index: 4;
 }
 .language-content .menu-items {
   max-height: 400px;
   overflow-y: scroll;
 }
-input {
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0px 601px 168px 0px rgba(0, 0, 0, 0), 0px 385px 154px 0px rgba(0, 0, 0, 0.01), 0px 216px 130px 0px rgba(0, 0, 0, 0.04), 0px 96px 96px 0px rgba(0, 0, 0, 0.06), 0px 24px 53px 0px rgba(0, 0, 0, 0.07);
-}
 .businesses .searchnav {
   display: flex;
-  margin: 16px 16px 0;
+  margin: 16px 0 0 16px;
+}
+.businesses .nav-button {
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+}
+.businesses .search-wrapper {
+  flex: 1 1 0%;
 }
 .businesses input.search {
   background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0px 601px 168px 0px rgba(0, 0, 0, 0), 0px 385px 154px 0px rgba(0, 0, 0, 0.01), 0px 216px 130px 0px rgba(0, 0, 0, 0.04), 0px 96px 96px 0px rgba(0, 0, 0, 0.06), 0px 24px 53px 0px rgba(0, 0, 0, 0.07);
+  border: 0;
+  height: 48px;
+  padding: 16px 16px 16px 56px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+}
+.businesses input.search::placeholder {
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.businesses .search-img {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  margin-top: -48px;
+  z-index: 8888;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.businesses .scanner {
+  margin: 16px 16px 0 16px;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='30' ry='30' stroke='%23cac7c4' stroke-width='1' stroke-dasharray='10%2c 10' stroke-dashoffset='0' stroke-linecap='round'/%3e%3c/svg%3e");
+  display: flex;
+  padding: 52px 0px 8px 0px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 51px;
+}
+.businesses .scanner-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+.businesses .scanner-content .h2-bold {
+  text-align: center;
+}
+.businesses .scanner-button.button-default {
+  background-color: #ffffff;
+  width: calc(100% - 16px);
+  border: 0;
+}
+.businesses .section.last-visited {
+  margin: 24px 16px 0 16px;
+}
+.businesses .section.all-businesses {
+  margin: 24px 16px 72px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 /**
 * DEMO PURPOUSES
