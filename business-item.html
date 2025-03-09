@@ -14,66 +14,43 @@
 </head>
 
 <body>
-
-
-    <div id="page-content" class="businesses">
-        <div class="section searchnav">
-            <div class="search-wrapper">
-                <input class="search" type="text" placeholder="Search for cafe, restaurant" />
-                <div class="search-img">
-                    <img src="images/search.svg" alt="search" width="24" height="24" />
+    <!-- NAHLADOVY OBRAZOK FIRMY -->
+    <div class="business-item-offers">
+        <div class="header-image" style="background-image: url('https://dummyimage.com/8000x237/0c0/fff');">
+            <div class="header-image-content">
+                <div class="header-image-nav">
+                    <div class="icon-button-round" onclick="window.history.back();">
+                        <img src="images/arrow-narrow-left.svg" alt="back" width="24" height="24" />
+                    </div>
+                    <div class="icon-button-round">
+                        <img src="images/hamburger.svg" alt="heart" width="24" height="24" />
+                    </div>
                 </div>
-            </div>
-            <div class="nav-button">
-                <img id="navbar-hamburger" class="navbar-hamburger" src="images/hamburger.svg" alt="menu" width="24"
-                    height="24" />
+                <h2 class="h2-bold">Business Name</h2>
             </div>
         </div>
 
-        <div class="section scanner">
-            <div class="scanner-content">
-                <div class="scnanner-logo">
-                    <img src="images/scanner-logo.svg" alt="scanner" width="80" height="80" />
-                </div>
-                <div class="h2-bold">Scan the QR code in the business</div>
-            </div>
-            <button class="button-default scanner-button">Turn on the scanner</button>
+        <!-- MENU -->
+        <div class="business-item-nav">
+            <button class="button-nav subh2 selected">Offers</button>
+            <button class="button-nav subh2">Menu</button>
+            <button class="button-nav subh2">News</button>
+            <button class="button-nav subh2">E-shop</button>
+            <button class="button-nav subh2">Info</button>
+            <button class="button-nav subh2">History</button>
         </div>
 
+        </button>
 
-        <div class="section last-visited">
-            <div class="h3">Last visited businesses</div>
-        </div>
-
-        <div class="section all-businesses">
-
-            <div>
-                <a href="business-item.html">
-                    <img width="100%" height="300px" src="https://dummyimage.com/500x500/999/fff" alt="qr" />
-                </a>
-            </div>
-            <div>
-                <img width="100%" height="300px" src="https://dummyimage.com/500x500/990/fff" alt="qr" />
-            </div>
-            <div>
-                <img width="100%" height="300px" src="https://dummyimage.com/500x500/909/fff" alt="qr" />
-            </div>
-            <div>
-                <img width="100%" height="300px" src="https://dummyimage.com/500x500/099/fff" alt="qr" />
-            </div>
-            <div>
-                <img width="100%" height="300px" src="https://dummyimage.com/500x500/009/fff" alt="qr" />
-            </div>
-            <div>
-                <img width="100%" height="300px" src="https://dummyimage.com/500x500/900/fff" alt="qr" />
-            </div>
-        </div>
     </div>
+
+
 
     <div id="footer-bar" class="footer">
         <div class="footer-content">
             <div class="footer-content-item">
-                <button class="button" onclick="console.log('footer home clicked');window.location.href='home.html';">
+                <button class="button selected"
+                    onclick="console.log('footer home clicked');window.location.href='home.html';">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g id="home-05">
                             <path id="Icon"
@@ -81,10 +58,11 @@
                                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </g>
                     </svg>
+                    Home
                 </button>
             </div>
             <div class="footer-content-item">
-                <button class="button selected"
+                <button class="button"
                     onclick="console.log('footer business clicked');window.location.href='businesses.html';">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g id="map-01" clip-path="url(#clip0_52_11238)">
@@ -111,13 +89,12 @@
                                 stroke="#232122" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </g>
                     </svg>
-
+                    <span class="button-label">Profile</span>
                 </button>
             </div>
 
         </div>
     </div>
-
 </body>
 
 </html>

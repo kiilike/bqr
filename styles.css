@@ -159,18 +159,6 @@ label.icon-button {
   justify-content: center;
   align-items: center;
 }
-.register-socials .button {
-  flex: 1;
-  background-color: #ffffff;
-  display: flex;
-  border: 0;
-  flex-direction: column;
-  gap: 8px;
-  border-radius: 8px;
-  padding: 12px;
-  justify-content: center;
-  align-items: center;
-}
 .section {
   margin: 0 16px;
 }
@@ -247,6 +235,18 @@ label.icon-button {
   background-color: #ffffff;
   border-radius: 14px;
 }
+.button-socials {
+  flex: 1;
+  background-color: #ffffff;
+  display: flex;
+  border: 0;
+  flex-direction: column;
+  gap: 8px;
+  border-radius: 8px;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+}
 .button-default {
   border-radius: 1000px;
   padding: 20px;
@@ -270,6 +270,34 @@ label.icon-button {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(20px);
   background-color: transparent;
+}
+.icon-button-round {
+  display: flex;
+  padding: 8px;
+  align-items: center;
+  border-radius: 104px;
+  backdrop-filter: blur(32px);
+  background-color: #ffffff;
+}
+.button-nav {
+  padding: 8px 12px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 56px;
+  border: 0;
+  white-space: nowrap;
+  background-color: transparent;
+  color: #808080;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  letter-spacing: -1%;
+  font-size: 16px;
+  line-height: 19.36px;
+}
+.button-nav.selected {
+  background-color: #864b33;
+  color: #ffffff;
 }
 .footer {
   position: fixed;
@@ -434,6 +462,36 @@ label.icon-button {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+.business-item-offers .header-image-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  height: 237px;
+}
+.business-item-offers .header-image .h2-bold {
+  margin-left: 16px;
+  color: #ffffff;
+}
+.business-item-offers .header-image-nav {
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.business-item-offers .header-image-nav .icon-button-round {
+  margin: 16px;
+}
+.business-item-offers .business-item-nav {
+  margin: 16px;
+  display: flex;
+  gap: 4px;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+.business-item-offers .business-item-nav::-webkit-scrollbar {
+  display: none;
 }
 /**
 * DEMO PURPOUSES
