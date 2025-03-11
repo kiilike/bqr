@@ -52,7 +52,12 @@ h1-bold {
   line-height: 14.52px;
 }
 .text {
-  color: #808080;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  font-weight: 400;
 }
 html {
   font-family: "Inter", sans-serif;
@@ -487,6 +492,97 @@ label.icon-button {
 }
 .business-item-offers .business-item-nav::-webkit-scrollbar {
   display: none;
+}
+.business-item-offers .credits-box {
+  padding: 16px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.business-item-offers .credits-box-value {
+  color: #FFF;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+  position: absolute;
+  top: 45%;
+  left: 8%;
+  transform: translateY(-75%);
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: start;
+}
+.business-item-offers .credits-box-label {
+  opacity: 0.5;
+}
+.business-item-offers .coupons-container {
+  margin-left: 16px;
+  display: flex;
+  gap: 10px;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+.business-item-offers .coupons-container::-webkit-scrollbar {
+  display: none;
+}
+.business-item-offers .coupons-title {
+  margin: 16px;
+}
+.business-item-offers .coupon {
+  filter: drop-shadow(0px 1.417px 1.417px rgba(0, 0, 0, 0.09)) drop-shadow(0px 2.834px 1.417px rgba(0, 0, 0, 0.05)) drop-shadow(0px 5.668px 1.417px rgba(0, 0, 0, 0.01)) drop-shadow(0px 8.502px 2.834px rgba(0, 0, 0, 0));
+}
+.business-item-offers .coupon-content {
+  width: 287px;
+  height: 88px;
+  background-color: #ffffff;
+  border-radius: 16px;
+}
+.business-item-offers .coupon-content::before {
+  content: '';
+  left: 62px;
+  top: -25px;
+  width: 37px;
+  height: 37px;
+  border-radius: 37px;
+  background: #f5f5f5;
+  display: block;
+  position: relative;
+}
+.business-item-offers .coupon-content::after {
+  content: '';
+  width: 37px;
+  height: 37px;
+  border-radius: 37px;
+  background: #f5f5f5;
+  left: 62px;
+  bottom: -21px;
+  display: block;
+  position: relative;
+}
+.business-item-offers .back {
+  width: 400px;
+  height: 300px;
+  background: yellow;
+}
+.business-item-offers .base {
+  position: relative;
+  left: 10px;
+  top: 10px;
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  mix-blend-mode: hard-light;
+  filter: drop-shadow(0px 1.417px 1.417px rgba(0, 0, 0, 0.09)) drop-shadow(0px 2.834px 1.417px rgba(0, 0, 0, 0.05)) drop-shadow(0px 5.668px 1.417px rgba(0, 0, 0, 0.01)) drop-shadow(0px 8.502px 2.834px rgba(0, 0, 0, 0));
+}
+.business-item-offers .hole {
+  width: 80px;
+  height: 50px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: gray;
 }
 /**
 * DEMO PURPOUSES
