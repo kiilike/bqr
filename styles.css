@@ -51,6 +51,9 @@ h1-bold {
   font-size: 12px;
   line-height: 14.52px;
 }
+.bold {
+  font-weight: 700;
+}
 .text {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -240,7 +243,7 @@ label.icon-button {
   background-color: #ffffff;
   border-radius: 14px;
 }
-.button-socials {
+.button-social {
   flex: 1;
   background-color: #ffffff;
   display: flex;
@@ -296,8 +299,7 @@ label.icon-button {
   color: #808080;
 }
 .button-nav.selected {
-  background-color: #864b33;
-  color: #ffffff;
+  font-weight: 600;
 }
 .footer {
   position: fixed;
@@ -341,6 +343,7 @@ label.icon-button {
 .footer .button.selected {
   background-color: #efeefb;
   color: #8c7dee;
+  font-weight: 600;
 }
 .footer .button.selected svg {
   stroke: #8c7dee;
@@ -463,6 +466,9 @@ label.icon-button {
   flex-direction: column;
   gap: 8px;
 }
+.business-item-offers {
+  padding: 0 0 102px;
+}
 .business-item-offers .header-image-content {
   display: flex;
   flex-direction: column;
@@ -484,7 +490,7 @@ label.icon-button {
   margin: 16px;
 }
 .business-item-offers .business-item-nav {
-  margin: 16px;
+  margin: 16px 0;
   display: flex;
   gap: 4px;
   overflow: scroll;
@@ -492,6 +498,12 @@ label.icon-button {
 }
 .business-item-offers .business-item-nav::-webkit-scrollbar {
   display: none;
+}
+.business-item-offers .business-item-nav > :first-child {
+  margin-left: 16px;
+}
+.business-item-offers .business-item-nav > :last-child {
+  margin-right: 16px;
 }
 .business-item-offers .credits-box {
   padding: 16px;
@@ -518,8 +530,22 @@ label.icon-button {
 .business-item-offers .credits-box-label {
   opacity: 0.5;
 }
+.business-item-offers .credits-box-qr {
+  background-color: #ffffff;
+  position: absolute;
+  top: 23%;
+  right: 8%;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.business-item-offers .credits-box-qr svg {
+  fill: #232122;
+}
 .business-item-offers .coupons-container {
-  margin-right: 0;
   display: flex;
   gap: 10px;
   overflow: scroll hidden;
@@ -528,11 +554,17 @@ label.icon-button {
 .business-item-offers .coupons-container::-webkit-scrollbar {
   display: none;
 }
+.business-item-offers .coupons-container > :first-child {
+  margin-left: 16px;
+}
+.business-item-offers .coupons-container > :last-child {
+  margin-right: 16px;
+}
 .business-item-offers .coupons-title {
   margin: 16px;
 }
 .business-item-offers .coupon {
-  margin: 6px 0 4px 16px;
+  margin: 6px 0 4px;
 }
 .business-item-offers .coupon:last-of-type {
   margin-right: 16px;
@@ -564,7 +596,7 @@ label.icon-button {
   border-radius: 37px;
   background: #f5f5f5;
   left: 62px;
-  bottom: 14px;
+  bottom: 37px;
   display: block;
   position: relative;
   box-shadow: inset 0 0 3px 1px #E5E5E5;
@@ -572,6 +604,103 @@ label.icon-button {
 .business-item-offers .coupon-inner {
   height: 88px;
   margin-top: -37px;
+}
+.business-item-offers .coupon-inner::after {
+  content: '';
+  display: block;
+  height: 47px;
+  width: 3px;
+  margin-left: 80px;
+  margin-top: 23px;
+  background: repeating-linear-gradient(to bottom, #f5f5f5 0px, #f5f5f5 5px, transparent 5px, transparent 10px);
+}
+.business-item-offers .coupon-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 88px;
+  border-radius: 16px 0 0 16px;
+  position: relative;
+  margin-top: -88px;
+}
+.business-item-offers .coupon-desc {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 180px;
+  height: 88px;
+  margin-top: -88px;
+  margin-left: 96px;
+  text-align: left;
+}
+.business-item-offers .coupon-desc .desc {
+  color: #808080;
+}
+.business-item-offers .cashback-title {
+  margin: 24px 16px 16px;
+}
+.business-item-offers .cashback-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.business-item-offers .cashback-bubble {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.09)) drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.05)) drop-shadow(0px 4px 1px rgba(0, 0, 0, 0.01)) drop-shadow(0px 6px 2px rgba(0, 0, 0, 0));
+  margin: 0 16px;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.business-item-offers .cashback-main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.business-item-offers .cashback-bubble-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 43px;
+  min-height: 43px;
+  border-radius: 48px;
+  background-color: #ededed;
+  margin-right: 16px;
+}
+.business-item-offers .cashback-bubble-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.business-item-offers .cashback-usage {
+  background-color: #f5f5f5;
+  border-radius: 100px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+.business-item-offers .cashback-usage-used {
+  padding: 6px 12px;
+  border-radius: 100px;
+  width: calc((100% - 32px) / 2);
+}
+.business-item-offers .cashback-usage-remaining {
+  padding: 6px 12px;
+}
+.business-item-offers .camera {
+  position: fixed;
+  display: flex;
+  width: 56px;
+  height: 56px;
+  bottom: 85px;
+  right: 10px;
+  border-radius: 56px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
 }
 /**
 * DEMO PURPOUSES

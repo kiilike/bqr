@@ -11,15 +11,40 @@
 <head>
     <title>Businesses</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
 </head>
 
 <body>
+
+    <!-- NASTAVIT SPRAVNE 
+        COLOR-THEME: #AE0D21 
+        COLOR-THEME-COMPLEMENT: #FFFFFF
+    -->
+    <style>
+        .camera,
+        .button-nav.selected,
+        .cashback-usage-used {
+            background-color: #AE0D21;
+            color: #FFFFFF;
+        }
+
+        .credits-box svg {
+            fill: #AE0D21;
+        }
+
+        .camera svg {
+            fill: #FFFFFF;
+        }
+    </style>
+
     <!-- NAHLADOVY OBRAZOK FIRMY -->
     <div class="business-item-offers">
-        <div class="header-image" style="background-image: url('https://dummyimage.com/8000x237/0c0/fff');">
+        <div class="header-image" style="background-image: url('https://dummyimage.com/8000x237/b3b3b5/fff');">
             <div class="header-image-content">
                 <div class="header-image-nav">
-                    <div class="icon-button-round" onclick="window.history.back();">
+                    <div class="icon-button-round" onclick="window.location.href='businesses.html';">
                         <img src="images/arrow-narrow-left.svg" alt="back" width="24" height="24" />
                     </div>
                     <div class="icon-button-round">
@@ -30,7 +55,7 @@
             </div>
         </div>
 
-        <!-- MENU -->
+        <!-- MENU, DOLEZITE JE NASTAVIT SELECTED -->
         <div class="business-item-nav">
             <button class="button-nav subh2 selected">Offers</button>
             <button class="button-nav subh2">Menu</button>
@@ -40,10 +65,10 @@
             <button class="button-nav subh2">History</button>
         </div>
 
-
+        <!-- ZMEN COLOR THEME farbu in <rect> -->
         <div class="credits-box">
             <svg viewBox="0 0 370 96" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect id width="370" height="96" rx="14" fill="ORANGE" />
+                <rect id width="370" height="96" rx="14" />
                 <g filter="url(#filter0_i_294_12289)">
                     <path
                         d="M355.5 70H207.633C202.547 70 198.259 73.6588 194.26 76.8011C191.71 78.8049 188.495 80 185 80C181.505 80 178.29 78.8049 175.74 76.8011C171.741 73.6587 167.453 70 162.367 70H14.5C4 70 4 62.5 4 58V16C4 4.00004 12.9999 4.00001 16.4999 4H16.5H353.5C357 4.00001 366 3.99996 366 16V58C366 62.5 366 70 355.5 70Z"
@@ -101,8 +126,15 @@
             </svg>
             <div class="credits-box-value">100
                 <div class="credits-box-label text">credits</div>
+            </div>
+            <div class="credits-box-qr">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M3.02637 10.0718C1.26318 10.0718 0.409668 9.21826 0.409668 7.41016V2.96289C0.409668 1.16602 1.26318 0.3125 3.02637 0.3125H7.54102C9.31543 0.3125 10.1577 1.16602 10.1577 2.96289V7.41016C10.1577 9.21826 9.31543 10.0718 7.54102 10.0718H3.02637ZM14.459 10.0718C12.6958 10.0718 11.8423 9.21826 11.8423 7.41016V2.96289C11.8423 1.16602 12.6958 0.3125 14.459 0.3125H18.9736C20.7368 0.3125 21.5903 1.16602 21.5903 2.96289V7.41016C21.5903 9.21826 20.7368 10.0718 18.9736 10.0718H14.459ZM2.93652 8.15137H7.63086C8.04639 8.15137 8.24854 7.94922 8.24854 7.51123V2.86182C8.24854 2.43506 8.04639 2.23291 7.63086 2.23291H2.93652C2.521 2.23291 2.33008 2.43506 2.33008 2.86182V7.51123C2.33008 7.94922 2.521 8.15137 2.93652 8.15137ZM14.3804 8.15137H19.0635C19.479 8.15137 19.6699 7.94922 19.6699 7.51123V2.86182C19.6699 2.43506 19.479 2.23291 19.0635 2.23291H14.3804C13.9536 2.23291 13.7627 2.43506 13.7627 2.86182V7.51123C13.7627 7.94922 13.9536 8.15137 14.3804 8.15137ZM4.25049 6.4668C4.0708 6.4668 4.01465 6.38818 4.01465 6.18604V4.18701C4.01465 3.98486 4.0708 3.91748 4.25049 3.91748H6.30566C6.48535 3.91748 6.56396 3.98486 6.56396 4.18701V6.18604C6.56396 6.38818 6.48535 6.4668 6.30566 6.4668H4.25049ZM15.728 6.4668C15.5483 6.4668 15.4922 6.38818 15.4922 6.18604V4.18701C15.4922 3.98486 15.5483 3.91748 15.728 3.91748H17.7832C17.9629 3.91748 18.0415 3.98486 18.0415 4.18701V6.18604C18.0415 6.38818 17.9629 6.4668 17.7832 6.4668H15.728ZM3.02637 21.4932C1.26318 21.4932 0.409668 20.6509 0.409668 18.8428V14.3955C0.409668 12.5986 1.26318 11.7451 3.02637 11.7451H7.54102C9.31543 11.7451 10.1577 12.5986 10.1577 14.3955V18.8428C10.1577 20.6509 9.31543 21.4932 7.54102 21.4932H3.02637ZM12.6396 14.811C12.4712 14.811 12.4038 14.7437 12.4038 14.5303V12.5312C12.4038 12.3291 12.4712 12.2617 12.6396 12.2617H14.7061C14.8857 12.2617 14.9644 12.3291 14.9644 12.5312V14.5303C14.9644 14.7437 14.8857 14.811 14.7061 14.811H12.6396ZM18.6929 14.811C18.5132 14.811 18.457 14.7437 18.457 14.5303V12.5312C18.457 12.3291 18.5132 12.2617 18.6929 12.2617H20.7593C20.939 12.2617 21.0063 12.3291 21.0063 12.5312V14.5303C21.0063 14.7437 20.939 14.811 20.7593 14.811H18.6929ZM2.93652 19.584H7.63086C8.04639 19.584 8.24854 19.3818 8.24854 18.9551V14.2944C8.24854 13.8677 8.04639 13.6655 7.63086 13.6655H2.93652C2.521 13.6655 2.33008 13.8677 2.33008 14.2944V18.9551C2.33008 19.3818 2.521 19.584 2.93652 19.584ZM15.6943 17.832C15.5259 17.832 15.4585 17.7646 15.4585 17.5513V15.5522C15.4585 15.3613 15.5259 15.2827 15.6943 15.2827H17.7607C17.9404 15.2827 18.0078 15.3613 18.0078 15.5522V17.5513C18.0078 17.7646 17.9404 17.832 17.7607 17.832H15.6943ZM4.25049 17.8994C4.0708 17.8994 4.01465 17.8208 4.01465 17.6187V15.6196C4.01465 15.4175 4.0708 15.3501 4.25049 15.3501H6.30566C6.48535 15.3501 6.56396 15.4175 6.56396 15.6196V17.6187C6.56396 17.8208 6.48535 17.8994 6.30566 17.8994H4.25049ZM12.6396 20.853C12.4712 20.853 12.4038 20.7856 12.4038 20.5723V18.5732C12.4038 18.3823 12.4712 18.3037 12.6396 18.3037H14.7061C14.8857 18.3037 14.9644 18.3823 14.9644 18.5732V20.5723C14.9644 20.7856 14.8857 20.853 14.7061 20.853H12.6396ZM18.6929 20.853C18.5132 20.853 18.457 20.7856 18.457 20.5723V18.5732C18.457 18.3823 18.5132 18.3037 18.6929 18.3037H20.7593C20.939 18.3037 21.0063 18.3823 21.0063 18.5732V20.5723C21.0063 20.7856 20.939 20.853 20.7593 20.853H18.6929Z" />
+                </svg>
 
             </div>
+
         </div>
 
 
@@ -113,23 +145,82 @@
             <div class="coupons-container">
 
                 <div class="coupon">
-
                     <div class="coupon-content">
-                        <div class="coupon-inner">
+                        <div class="coupon-inner"></div>
+                    </div>
+                    <div class="coupon-icon">
+                        <img src="./images/png/balloon.png" alt="balloon" />
+                    </div>
+                    <div class="coupon-desc">
+                        <div class="h3-bold">
+                            Free coffee for you!
+                        </div>
+                        <div class="desc">
+                            Every 10th coffee
                         </div>
                     </div>
-
-
                 </div>
+
                 <div class="coupon">
                     <div class="coupon-content">
-                        <div class="coupon-inner">
+                        <div class="coupon-inner"></div>
+                    </div>
+                    <div class="coupon-icon">
+                        <img src="./images/png/happy.png" alt="happy" />
+                    </div>
+                    <div class="coupon-desc">
+                        <div class="h3-bold">
+                            10% discount
+                        </div>
+                        <div class="desc">
+                            Every black tea
                         </div>
                     </div>
                 </div>
+
                 <div class="coupon">
                     <div class="coupon-content">
-                        <div class="coupon-inner">
+                        <div class="coupon-inner"></div>
+                    </div>
+                    <div class="coupon-icon">
+                        <img src="./images/png/coffee.png" alt="coffee" />
+                    </div>
+                    <div class="coupon-desc">
+                        <div class="h3-bold">
+                            200 credits
+                        </div>
+                        <div class="desc">
+                            Bikes, bikes, bikes, bikes, bikes, bikes
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cashback">
+            <div class="cashback-title">Cashback & credits</div>
+            <div class="cashback-container">
+                <div class="cashback-bubble">
+                    <div class="cashback-main">
+                        <div class="cashback-bubble-icon">
+                            <img src="./images/png/present.png" alt="present" />
+                        </div>
+                        <div class="cashback-bubble-content">
+                            <div class="h3-bold">5% cashback</div>
+                            <div class="desc">Cashback from every payment</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cashback-bubble">
+                    <div class="cashback-main">
+                        <div class="cashback-bubble-icon">
+                            <img src="./images/png/hearts.png" alt="hearts" />
+                        </div>
+                        <div class="cashback-bubble-content">
+                            <div class="h3-bold">Save up to 1.5€</div>
+                            <div class="desc">Buy a dessert for at least 3€ and get esspresso for 1€ or cappucino for
+                                1.5€. This promo cannot be combined</div>
                         </div>
                     </div>
                 </div>
@@ -137,16 +228,62 @@
         </div>
 
 
+        <div class="cashback">
+            <div class="cashback-title">All coupons</div>
+            <div class="cashback-container">
+                <div class="cashback-bubble">
+                    <div class="cashback-main">
+                        <div class="cashback-bubble-icon">
+                            <img src="./images/png/money.png" alt="money" />
+                        </div>
+                        <div class="cashback-bubble-content">
+                            <div class="h3-bold">5% cashback</div>
+                            <div class="desc">Cashback from every payment</div>
+                        </div>
+                    </div>
+                    <div class="cashback-usage">
+                        <div class="cashback-usage-used bold">
+                            1 coffee enjoyed
+                        </div>
+
+                        <div class="cashback-usage-remaining desc">9 remaining</div>
+                    </div>
+                </div>
+                <div class="cashback-bubble">
+                    <div class="cashback-main">
+                        <div class="cashback-bubble-icon">
+                            <img src="./images/png/hearts.png" alt="hearts" />
+                        </div>
+                        <div class="cashback-bubble-content">
+                            <div class="h3-bold">Save up to 1.5€</div>
+                            <div class="desc">Buy a dessert for at least 3€ and get esspresso for 1€ or cappucino for
+                                1.5€. This promo cannot be combined</div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="camera">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M3.02637 10.0718C1.26318 10.0718 0.409668 9.21826 0.409668 7.41016V2.96289C0.409668 1.16602 1.26318 0.3125 3.02637 0.3125H7.54102C9.31543 0.3125 10.1577 1.16602 10.1577 2.96289V7.41016C10.1577 9.21826 9.31543 10.0718 7.54102 10.0718H3.02637ZM14.459 10.0718C12.6958 10.0718 11.8423 9.21826 11.8423 7.41016V2.96289C11.8423 1.16602 12.6958 0.3125 14.459 0.3125H18.9736C20.7368 0.3125 21.5903 1.16602 21.5903 2.96289V7.41016C21.5903 9.21826 20.7368 10.0718 18.9736 10.0718H14.459ZM2.93652 8.15137H7.63086C8.04639 8.15137 8.24854 7.94922 8.24854 7.51123V2.86182C8.24854 2.43506 8.04639 2.23291 7.63086 2.23291H2.93652C2.521 2.23291 2.33008 2.43506 2.33008 2.86182V7.51123C2.33008 7.94922 2.521 8.15137 2.93652 8.15137ZM14.3804 8.15137H19.0635C19.479 8.15137 19.6699 7.94922 19.6699 7.51123V2.86182C19.6699 2.43506 19.479 2.23291 19.0635 2.23291H14.3804C13.9536 2.23291 13.7627 2.43506 13.7627 2.86182V7.51123C13.7627 7.94922 13.9536 8.15137 14.3804 8.15137ZM4.25049 6.4668C4.0708 6.4668 4.01465 6.38818 4.01465 6.18604V4.18701C4.01465 3.98486 4.0708 3.91748 4.25049 3.91748H6.30566C6.48535 3.91748 6.56396 3.98486 6.56396 4.18701V6.18604C6.56396 6.38818 6.48535 6.4668 6.30566 6.4668H4.25049ZM15.728 6.4668C15.5483 6.4668 15.4922 6.38818 15.4922 6.18604V4.18701C15.4922 3.98486 15.5483 3.91748 15.728 3.91748H17.7832C17.9629 3.91748 18.0415 3.98486 18.0415 4.18701V6.18604C18.0415 6.38818 17.9629 6.4668 17.7832 6.4668H15.728ZM3.02637 21.4932C1.26318 21.4932 0.409668 20.6509 0.409668 18.8428V14.3955C0.409668 12.5986 1.26318 11.7451 3.02637 11.7451H7.54102C9.31543 11.7451 10.1577 12.5986 10.1577 14.3955V18.8428C10.1577 20.6509 9.31543 21.4932 7.54102 21.4932H3.02637ZM12.6396 14.811C12.4712 14.811 12.4038 14.7437 12.4038 14.5303V12.5312C12.4038 12.3291 12.4712 12.2617 12.6396 12.2617H14.7061C14.8857 12.2617 14.9644 12.3291 14.9644 12.5312V14.5303C14.9644 14.7437 14.8857 14.811 14.7061 14.811H12.6396ZM18.6929 14.811C18.5132 14.811 18.457 14.7437 18.457 14.5303V12.5312C18.457 12.3291 18.5132 12.2617 18.6929 12.2617H20.7593C20.939 12.2617 21.0063 12.3291 21.0063 12.5312V14.5303C21.0063 14.7437 20.939 14.811 20.7593 14.811H18.6929ZM2.93652 19.584H7.63086C8.04639 19.584 8.24854 19.3818 8.24854 18.9551V14.2944C8.24854 13.8677 8.04639 13.6655 7.63086 13.6655H2.93652C2.521 13.6655 2.33008 13.8677 2.33008 14.2944V18.9551C2.33008 19.3818 2.521 19.584 2.93652 19.584ZM15.6943 17.832C15.5259 17.832 15.4585 17.7646 15.4585 17.5513V15.5522C15.4585 15.3613 15.5259 15.2827 15.6943 15.2827H17.7607C17.9404 15.2827 18.0078 15.3613 18.0078 15.5522V17.5513C18.0078 17.7646 17.9404 17.832 17.7607 17.832H15.6943ZM4.25049 17.8994C4.0708 17.8994 4.01465 17.8208 4.01465 17.6187V15.6196C4.01465 15.4175 4.0708 15.3501 4.25049 15.3501H6.30566C6.48535 15.3501 6.56396 15.4175 6.56396 15.6196V17.6187C6.56396 17.8208 6.48535 17.8994 6.30566 17.8994H4.25049ZM12.6396 20.853C12.4712 20.853 12.4038 20.7856 12.4038 20.5723V18.5732C12.4038 18.3823 12.4712 18.3037 12.6396 18.3037H14.7061C14.8857 18.3037 14.9644 18.3823 14.9644 18.5732V20.5723C14.9644 20.7856 14.8857 20.853 14.7061 20.853H12.6396ZM18.6929 20.853C18.5132 20.853 18.457 20.7856 18.457 20.5723V18.5732C18.457 18.3823 18.5132 18.3037 18.6929 18.3037H20.7593C20.939 18.3037 21.0063 18.3823 21.0063 18.5732V20.5723C21.0063 20.7856 20.939 20.853 20.7593 20.853H18.6929Z" />
+            </svg>
+        </div>
+
+
+
     </div>
 
 
 
-
+    <!-- Dolezita je class SELECTED na buttone -->
     <div id="footer-bar" class="footer">
         <div class="footer-content">
             <div class="footer-content-item">
-                <button class="button selected"
-                    onclick="console.log('footer home clicked');window.location.href='home.html';">
+                <button class="button" onclick="console.log('footer home clicked');window.location.href='home.html';">
                     <svg class="footer-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <g id="home-05">
@@ -155,11 +292,11 @@
                                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </g>
                     </svg>
-                    Home
+                    <span class="button-label">Home</span>
                 </button>
             </div>
             <div class="footer-content-item">
-                <button class="button"
+                <button class="button selected"
                     onclick="console.log('footer business clicked');window.location.href='businesses.html';">
                     <svg class="footer-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
