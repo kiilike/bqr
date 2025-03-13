@@ -21,21 +21,13 @@
             const params = new URLSearchParams(window.location.search);
             const bg = params.get("bg");
             const color = params.get("color");
-
             if (bg && color) {
-                console.log('a', bg);
                 const camera = document.querySelector(".camera");
                 const buttonNavSelected = document.querySelector(".button-nav.selected");
                 const couponUsageUsed = document.querySelector(".coupon-usage-used");
-
-
                 const creditsBox = document.querySelector(".credits-box svg");
                 const cameraSvg = document.querySelector(".camera svg");
-
-
-                console.log('cc', camera, buttonNavSelected, couponUsageUsed);
                 if (camera) {
-                    console.log('a', camera);
                     camera.style.backgroundColor = "#" + bg;
                     camera.style.color = "#" + color;
                 }
@@ -53,8 +45,6 @@
                 if (cameraSvg) {
                     cameraSvg.style.fill = "#" + color;
                 }
-
-
             }
         });
     </script>
@@ -65,7 +55,7 @@
         COLOR-THEME-COMPLEMENT: #FFFFFF
     -->
     <style>
-        /* .camera,
+        .camera,
         .button-nav.selected,
         .coupon-usage-used {
             background-color: #AE0D21;
@@ -78,7 +68,7 @@
 
         .camera svg {
             fill: #FFFFFF;
-        } */
+        }
     </style>
 
 
