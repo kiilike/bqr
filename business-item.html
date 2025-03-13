@@ -1,7 +1,7 @@
 <html>
 
 <!-- styles.css -->
-<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="styles.css?2">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
@@ -16,14 +16,58 @@
 
 <body>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const params = new URLSearchParams(window.location.search);
+            const bg = params.get("bg");
+            const color = params.get("color");
+
+            if (bg && color) {
+                console.log('a', bg);
+                const camera = document.querySelector(".camera");
+                const buttonNavSelected = document.querySelector(".button-nav.selected");
+                const couponUsageUsed = document.querySelector(".coupon-usage-used");
+
+
+                const creditsBox = document.querySelector(".credits-box svg");
+                const cameraSvg = document.querySelector(".camera svg");
+
+
+                console.log('cc', camera, buttonNavSelected, couponUsageUsed);
+                if (camera) {
+                    console.log('a', camera);
+                    camera.style.backgroundColor = "#" + bg;
+                    camera.style.color = "#" + color;
+                }
+                if (buttonNavSelected) {
+                    buttonNavSelected.style.backgroundColor = "#" + bg;
+                    buttonNavSelected.style.color = "#" + color;
+                }
+                if (couponUsageUsed) {
+                    couponUsageUsed.style.backgroundColor = "#" + bg;
+                    couponUsageUsed.style.color = "#" + color;
+                }
+                if (creditsBox) {
+                    creditsBox.style.fill = "#" + bg;
+                }
+                if (cameraSvg) {
+                    cameraSvg.style.fill = "#" + color;
+                }
+
+
+            }
+        });
+    </script>
+
+
     <!-- NASTAVIT SPRAVNE 
         COLOR-THEME: #AE0D21 
         COLOR-THEME-COMPLEMENT: #FFFFFF
     -->
     <style>
-        .camera,
+        /* .camera,
         .button-nav.selected,
-        .cashback-usage-used {
+        .coupon-usage-used {
             background-color: #AE0D21;
             color: #FFFFFF;
         }
@@ -34,9 +78,23 @@
 
         .camera svg {
             fill: #FFFFFF;
-        }
+        } */
     </style>
 
+
+
+
+
+
+
+
+
+
+
+
+    <!--                               -->
+    <!--          SHOP-HEADER          -->
+    <!--                               -->
     <!-- NAHLADOVY OBRAZOK FIRMY -->
     <div class="business-item-offers">
         <div class="header-image" style="background-image: url('https://dummyimage.com/8000x237/b3b3b5/fff');">
@@ -53,16 +111,37 @@
             </div>
         </div>
 
+
+
+
+
+        <!--                            -->
+        <!--          SHOP-NAV          -->
+        <!--                            -->
         <!-- MENU, DOLEZITE JE NASTAVIT SELECTED -->
         <div class="business-item-nav">
-            <button class="button-nav subh2 selected">Offers</button>
+            <button class="button-nav subh2 selected"
+                onclick="window.location.href='business-item.html';">Offers</button>
             <button class="button-nav subh2">Menu</button>
-            <button class="button-nav subh2">News</button>
+            <button class="button-nav subh2" onclick="window.location.href='business-item-news.html';">News</button>
             <button class="button-nav subh2">E-shop</button>
             <button class="button-nav subh2">Info</button>
-            <button class="button-nav subh2">History</button>
+            <button class="button-nav subh2"
+                onclick="window.location.href='business-item-history.html';">History</button>
         </div>
 
+
+
+
+
+
+
+
+
+
+        <!--                           -->
+        <!--          CREDITS          -->
+        <!--                           -->
         <!-- ZMEN COLOR THEME farbu in <rect> -->
         <div class="credits-box">
             <svg viewBox="0 0 370 96" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -135,84 +214,94 @@
         </div>
 
 
-        <div class="coupons">
-            <div class="coupons-title">Acquired coupons</div>
-            <div class="coupons-container">
 
-                <div class="coupon">
-                    <div class="coupon-content">
-                        <div class="coupon-inner"></div>
+
+
+
+
+
+
+        <!--                           -->
+        <!--          TICKETS          -->
+        <!--                           -->
+        <div class="tickets">
+            <div class="tickets-title">Acquired coupons</div>
+            <div class="tickets-container">
+
+                <div class="ticket">
+                    <div class="ticket-content">
+                        <div class="ticket-inner"></div>
                     </div>
-                    <div class="coupon-icon">
+                    <div class="ticket-icon">
                         <img src="./images/png/balloon.png" alt="balloon" />
                     </div>
-                    <div class="coupon-desc">
-                        <div class="h3-bold">
-                            Free coffee for you!
-                        </div>
-                        <div class="desc">
-                            Every 10th coffee
-                        </div>
+                    <div class="ticket-desc">
+                        <div class="h3-bold">Free coffee for you!</div>
+                        <div class="desc">Every 10th coffee</div>
                     </div>
                 </div>
 
-                <div class="coupon">
-                    <div class="coupon-content">
-                        <div class="coupon-inner"></div>
+                <div class="ticket">
+                    <div class="ticket-content">
+                        <div class="ticket-inner"></div>
                     </div>
-                    <div class="coupon-icon">
+                    <div class="ticket-icon">
                         <img src="./images/png/happy.png" alt="happy" />
                     </div>
-                    <div class="coupon-desc">
-                        <div class="h3-bold">
-                            10% discount
-                        </div>
-                        <div class="desc">
-                            Every black tea
-                        </div>
+                    <div class="ticket-desc">
+                        <div class="h3-bold">10% discount</div>
+                        <div class="desc">Every black tea</div>
                     </div>
                 </div>
 
-                <div class="coupon">
-                    <div class="coupon-content">
-                        <div class="coupon-inner"></div>
+                <div class="ticket">
+                    <div class="ticket-content">
+                        <div class="ticket-inner"></div>
                     </div>
-                    <div class="coupon-icon">
+                    <div class="ticket-icon">
                         <img src="./images/png/coffee.png" alt="coffee" />
                     </div>
-                    <div class="coupon-desc">
-                        <div class="h3-bold">
-                            200 credits
-                        </div>
-                        <div class="desc">
-                            Bikes, bikes, bikes, bikes, bikes, bikes
-                        </div>
+                    <div class="ticket-desc">
+                        <div class="h3-bold">200 credits</div>
+                        <div class="desc">Bikes, bikes, bikes, bikes, bikes, bikes</div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="cashback">
-            <div class="cashback-title">Cashback & credits</div>
-            <div class="cashback-container">
-                <div class="cashback-bubble">
-                    <div class="cashback-main">
-                        <div class="cashback-bubble-icon">
+
+
+
+
+
+
+
+
+
+        <!--                             -->
+        <!--          COUPONS #1         -->
+        <!--                             -->
+        <div class="coupon">
+            <div class="coupon-title">Cashback & credits</div>
+            <div class="coupon-container">
+                <div class="coupon-bubble">
+                    <div class="coupon-main">
+                        <div class="coupon-bubble-icon">
                             <img src="./images/png/present.png" alt="present" />
                         </div>
-                        <div class="cashback-bubble-content">
+                        <div class="coupon-bubble-content">
                             <div class="h3-bold">5% cashback</div>
                             <div class="desc">Cashback from every payment</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="cashback-bubble">
-                    <div class="cashback-main">
-                        <div class="cashback-bubble-icon">
+                <div class="coupon-bubble">
+                    <div class="coupon-main">
+                        <div class="coupon-bubble-icon">
                             <img src="./images/png/hearts.png" alt="hearts" />
                         </div>
-                        <div class="cashback-bubble-content">
+                        <div class="coupon-bubble-content">
                             <div class="h3-bold">Save up to 1.5€</div>
                             <div class="desc">Buy a dessert for at least 3€ and get esspresso for 1€ or cappucino for
                                 1.5€. This promo cannot be combined</div>
@@ -223,33 +312,36 @@
         </div>
 
 
-        <div class="cashback">
-            <div class="cashback-title">All coupons</div>
-            <div class="cashback-container">
-                <div class="cashback-bubble">
-                    <div class="cashback-main">
-                        <div class="cashback-bubble-icon">
+        <!--                             -->
+        <!--          COUPONS #2         -->
+        <!--                             -->
+        <div class="coupon">
+            <div class="coupon-title">All coupons</div>
+            <div class="coupon-container">
+                <div class="coupon-bubble">
+                    <div class="coupon-main">
+                        <div class="coupon-bubble-icon">
                             <img src="./images/png/money.png" alt="money" />
                         </div>
-                        <div class="cashback-bubble-content">
+                        <div class="coupon-bubble-content">
                             <div class="h3-bold">5% cashback</div>
                             <div class="desc">Cashback from every payment</div>
                         </div>
                     </div>
-                    <div class="cashback-usage">
-                        <div class="cashback-usage-used bold">
+                    <div class="coupon-usage">
+                        <div class="coupon-usage-used bold">
                             1 coffee enjoyed
                         </div>
 
-                        <div class="cashback-usage-remaining desc">9 remaining</div>
+                        <div class="coupon-usage-remaining desc">9 remaining</div>
                     </div>
                 </div>
-                <div class="cashback-bubble">
-                    <div class="cashback-main">
-                        <div class="cashback-bubble-icon">
+                <div class="coupon-bubble">
+                    <div class="coupon-main">
+                        <div class="coupon-bubble-icon">
                             <img src="./images/png/hearts.png" alt="hearts" />
                         </div>
-                        <div class="cashback-bubble-content">
+                        <div class="coupon-bubble-content">
                             <div class="h3-bold">Save up to 1.5€</div>
                             <div class="desc">Buy a dessert for at least 3€ and get esspresso for 1€ or cappucino for
                                 1.5€. This promo cannot be combined</div>
@@ -261,6 +353,13 @@
             </div>
         </div>
 
+
+
+
+
+        <!--                             -->
+        <!--          CAMERA         -->
+        <!--                             -->
         <div class="camera">
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path

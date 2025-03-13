@@ -8,7 +8,7 @@ h1-bold {
   letter-spacing: -2%;
   font-size: 38px;
   line-height: 43px;
-  font-weight: 700;
+  font-weight: 600;
 }
 .h2,
 .h2-bold {
@@ -29,21 +29,27 @@ h1-bold {
 .h1-bold,
 .h2-bold,
 .h3-bold {
-  font-weight: 700;
+  font-weight: 600;
 }
-.subh1 {
+.subh1,
+.subh1-bold {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   letter-spacing: -2%;
   font-size: 18px;
   line-height: 21.78px;
 }
-.subh2 {
+.subh2,
+.subh2-bold {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   letter-spacing: -1%;
   font-size: 16px;
   line-height: 19.36px;
+}
+.subh1-bold,
+.subh2-bold {
+  font-weight: 600;
 }
 .description {
   font-family: "Inter", sans-serif;
@@ -52,7 +58,7 @@ h1-bold {
   line-height: 14.52px;
 }
 .bold {
-  font-weight: 700;
+  font-weight: 600;
 }
 .text {
   font-family: "Inter", sans-serif;
@@ -256,13 +262,14 @@ label.icon-button {
   align-items: center;
 }
 .button-default {
+  font-size: 14px;
   border-radius: 1000px;
   padding: 20px;
   border: 1px solid #cac7c4;
   background-color: #f5f5f5;
   backdrop-filter: blur(10px);
   width: 100%;
-  font-weight: 700;
+  font-weight: 600;
 }
 .button-default.selected {
   background-color: #efeefb;
@@ -515,7 +522,7 @@ label.icon-button {
   color: #FFF;
   font-family: Lato;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: -0.8px;
   position: absolute;
   top: 45%;
@@ -545,38 +552,38 @@ label.icon-button {
 .business-item-offers .credits-box-qr svg {
   fill: #232122;
 }
-.business-item-offers .coupons-container {
+.business-item-offers .tickets-container {
   display: flex;
   gap: 10px;
   overflow: scroll hidden;
   scrollbar-width: none;
 }
-.business-item-offers .coupons-container::-webkit-scrollbar {
+.business-item-offers .tickets-container::-webkit-scrollbar {
   display: none;
 }
-.business-item-offers .coupons-container > :first-child {
+.business-item-offers .tickets-container > :first-child {
   margin-left: 16px;
 }
-.business-item-offers .coupons-container > :last-child {
+.business-item-offers .tickets-container > :last-child {
   margin-right: 16px;
 }
-.business-item-offers .coupons-title {
+.business-item-offers .tickets-title {
   margin: 16px;
 }
-.business-item-offers .coupon {
+.business-item-offers .ticket {
   margin: 6px 0 4px;
 }
-.business-item-offers .coupon:last-of-type {
+.business-item-offers .ticket:last-of-type {
   margin-right: 16px;
 }
-.business-item-offers .coupon-content {
+.business-item-offers .ticket-content {
   width: 287px;
   height: 88px;
   background-color: #ffffff;
   border-radius: 16px;
   box-shadow: 1px 5px 10px -6px #ccc;
 }
-.business-item-offers .coupon-content::before {
+.business-item-offers .ticket-content::before {
   content: '';
   left: 62px;
   top: -22px;
@@ -589,7 +596,7 @@ label.icon-button {
   box-shadow: inset 0 0 6px 2px #f0f0f0;
   margin-top: -6px;
 }
-.business-item-offers .coupon-content::after {
+.business-item-offers .ticket-content::after {
   content: '';
   width: 37px;
   height: 37px;
@@ -601,11 +608,11 @@ label.icon-button {
   position: relative;
   box-shadow: inset 0 0 3px 1px #E5E5E5;
 }
-.business-item-offers .coupon-inner {
+.business-item-offers .ticket-inner {
   height: 88px;
   margin-top: -37px;
 }
-.business-item-offers .coupon-inner::after {
+.business-item-offers .ticket-inner::after {
   content: '';
   display: block;
   height: 47px;
@@ -614,7 +621,7 @@ label.icon-button {
   margin-top: 23px;
   background: repeating-linear-gradient(to bottom, #f5f5f5 0px, #f5f5f5 5px, transparent 5px, transparent 10px);
 }
-.business-item-offers .coupon-icon {
+.business-item-offers .ticket-icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -624,7 +631,7 @@ label.icon-button {
   position: relative;
   margin-top: -88px;
 }
-.business-item-offers .coupon-desc {
+.business-item-offers .ticket-desc {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -634,18 +641,18 @@ label.icon-button {
   margin-left: 96px;
   text-align: left;
 }
-.business-item-offers .coupon-desc .desc {
+.business-item-offers .ticket-desc .desc {
   color: #808080;
 }
-.business-item-offers .cashback-title {
+.business-item-offers .coupon-title {
   margin: 24px 16px 16px;
 }
-.business-item-offers .cashback-container {
+.business-item-offers .coupon-container {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.business-item-offers .cashback-bubble {
+.business-item-offers .coupon-bubble {
   background-color: #ffffff;
   border-radius: 16px;
   padding: 16px;
@@ -655,12 +662,12 @@ label.icon-button {
   display: flex;
   flex-direction: column;
 }
-.business-item-offers .cashback-main {
+.business-item-offers .coupon-main {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-.business-item-offers .cashback-bubble-icon {
+.business-item-offers .coupon-bubble-icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -670,32 +677,74 @@ label.icon-button {
   background-color: #ededed;
   margin-right: 16px;
 }
-.business-item-offers .cashback-bubble-content {
+.business-item-offers .coupon-bubble-content {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
-.business-item-offers .cashback-usage {
+.business-item-offers .coupon-bubble-content .desc {
+  opacity: 0.6;
+}
+.business-item-offers .coupon-usage {
   background-color: #f5f5f5;
   border-radius: 100px;
   display: flex;
   justify-content: space-between;
   padding: 0;
 }
-.business-item-offers .cashback-usage-used {
+.business-item-offers .coupon-usage-used {
   padding: 6px 12px;
   border-radius: 100px;
   width: calc((100% - 32px) / 2);
 }
-.business-item-offers .cashback-usage-remaining {
+.business-item-offers .coupon-usage-remaining {
   padding: 6px 12px;
+}
+.business-item-offers .coupon-nothing {
+  font-style: italic;
+  color: #808080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.business-item-offers .history-item {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #ededed;
+  padding: 24px 0;
+  margin: 0 16px;
+}
+.business-item-offers .history-item:last-of-type {
+  border-bottom: 0;
+}
+.business-item-offers .history-item-date {
+  margin-top: 4px;
+  color: #808080;
+}
+.business-item-offers .history-item-chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+.business-item-offers .history-item-chip {
+  background-color: #ffffff;
+  padding: 5px 10px;
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  border-radius: 48px;
+}
+.business-item-offers .history-item-chip-label {
+  color: #808080;
 }
 .business-item-offers .camera {
   position: fixed;
   display: flex;
   width: 56px;
   height: 56px;
-  bottom: 85px;
+  bottom: 70px;
   right: 10px;
   border-radius: 56px;
   justify-content: center;

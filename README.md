@@ -2,20 +2,26 @@
 
 ## Styles
 
-To install Less globally:
+### Install Less globally
 
 ```sh
 npm install -g less
 ```
 
-To compile `styles.less` to `styles.css`:
+### Compile `styles.less` to `styles.css`
 
 ```sh
 lessc styles.less styles.css
 ```
 
-To watch `.less` files and compile them automatically:
+### Watch `.less` files and compile them automatically
 
 ```sh
 npx nodemon --ext less --exec "lessc styles.less styles.css"
 ```
+
+### Notes
+
+1. **SHOP NAV** - bold
+2. **SHOP NAV** - static menu - last item
+3. **How to implement SVG**

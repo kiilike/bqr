@@ -28,39 +28,38 @@ h1-bold {
     font-family: "Lato", "Open Sans", sans-serif;
     font-optical-sizing: auto;
     letter-spacing: -2%;
-    font-size: 38px; // 2.714rem equivalent
-    line-height: 43px; // 3.071rem equivalent
-    font-weight: 700;
+    font-size: 38px;
+    line-height: 43px;
+    font-weight: 600;
 }
 
-// 28px-33.6px
 .h2,
 .h2-bold {
     font-family: "Lato", "Open Sans", sans-serif;
     font-optical-sizing: auto;
     letter-spacing: -1%;
-    font-size: 28px; // 2rem equivalent
-    line-height: 33.6px; // 2.4rem equivalent
+    font-size: 28px;
+    line-height: 33.6px;
 }
 
-// 20px-24px
 .h3,
 .h3-bold {
     font-family: "Lato", "Open Sans", sans-serif;
     font-optical-sizing: auto;
     letter-spacing: -2%;
-    font-size: 20px; // 1.429rem equivalent
-    line-height: 24px; // 1.714rem equivalent
+    font-size: 20px;
+    line-height: 24px;
 }
 
 .h1-bold,
 .h2-bold,
 .h3-bold {
-    font-weight: 700;
+    font-weight: 600;
 }
 
-// 18px-21.78px
-.subh1 {
+
+.subh1,
+.subh1-bold {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     letter-spacing: -2%;
@@ -68,8 +67,9 @@ h1-bold {
     line-height: 21.78px; // 1.554rem equivalent
 }
 
-// 16px-19.36px
-.subh2 {
+
+.subh2,
+.subh2-bold {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     letter-spacing: -1%;
@@ -77,35 +77,40 @@ h1-bold {
     line-height: 19.36px; // 1.377rem equivalent
 }
 
-// 12px-14.52px
+.subh1-bold,
+.subh2-bold {
+    font-weight: 600;
+}
+
 .description {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    font-size: 12px; // 0.857rem equivalent
-    line-height: 14.52px; // 1.036rem equivalent
+    font-size: 12px;
+    line-height: 14.52px;
 }
 
+
 .bold {
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .text {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    font-size: 14px; // 1rem equivalent
-    line-height: 20px; // 1.429rem equivalent
+    font-size: 14px;
+    line-height: 20px;
     letter-spacing: 0;
     font-weight: 400;
 }
 
-// 14px-20px
+
 html {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     background-color: @bg;
     color: @text;
-    font-size: 14px; // 1rem equivalent
-    line-height: 20px; // 1.429rem equivalent
+    font-size: 14px;
+    line-height: 20px;
 }
 
 body {
@@ -337,13 +342,14 @@ label.icon-button {
 }
 
 .button-default {
+    font-size: 14px;
     border-radius: 1000px;
     padding: 20px;
     border: 1px solid @neutralLightGrey;
     background-color: @neutralF5;
     backdrop-filter: blur(10px);
     width: 100%;
-    font-weight: 700;
+    font-weight: 600;
 
     &.selected {
         background-color: @lilacLight;
@@ -625,7 +631,6 @@ label.icon-button {
         display: flex;
         gap: 4px;
         overflow: scroll;
-        // no visible scrollbar, ff, chrome
         scrollbar-width: none;
 
         &::-webkit-scrollbar {
@@ -654,7 +659,7 @@ label.icon-button {
         color: #FFF;
         font-family: Lato;
         font-style: normal;
-        font-weight: 700;
+        font-weight: 600;
         letter-spacing: -0.8px;
         position: absolute;
         top: 45%;
@@ -689,7 +694,7 @@ label.icon-button {
         fill: @neutralBlack;
     }
 
-    .coupons-container {
+    .tickets-container {
         display: flex;
         gap: 10px;
         overflow: scroll hidden;
@@ -708,11 +713,11 @@ label.icon-button {
         }
     }
 
-    .coupons-title {
+    .tickets-title {
         margin: 16px;
     }
 
-    .coupon {
+    .ticket {
 
         margin: 6px 0 4px;
 
@@ -722,7 +727,7 @@ label.icon-button {
     }
 
 
-    .coupon-content {
+    .ticket-content {
 
         width: 287px;
         height: 88px;
@@ -760,7 +765,7 @@ label.icon-button {
 
     }
 
-    .coupon-inner {
+    .ticket-inner {
         height: 88px;
         margin-top: -37px;
 
@@ -779,7 +784,7 @@ label.icon-button {
         }
     }
 
-    .coupon-icon {
+    .ticket-icon {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -790,7 +795,7 @@ label.icon-button {
         margin-top: -88px;
     }
 
-    .coupon-desc {
+    .ticket-desc {
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -801,23 +806,23 @@ label.icon-button {
         text-align: left;
     }
 
-    .coupon-desc .desc {
+    .ticket-desc .desc {
         color: @neutralGrey;
     }
 
 
 
-    .cashback-title {
+    .coupon-title {
         margin: 24px 16px 16px;
     }
 
-    .cashback-container {
+    .coupon-container {
         display: flex;
         flex-direction: column;
         gap: 8px;
     }
 
-    .cashback-bubble {
+    .coupon-bubble {
         background-color: @neutralWhite;
         border-radius: 16px;
         padding: 16px;
@@ -828,13 +833,13 @@ label.icon-button {
         flex-direction: column;
     }
 
-    .cashback-main {
+    .coupon-main {
         display: flex;
         justify-content: flex-start;
         align-items: center;
     }
 
-    .cashback-bubble-icon {
+    .coupon-bubble-icon {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -845,13 +850,17 @@ label.icon-button {
         margin-right: 16px;
     }
 
-    .cashback-bubble-content {
+    .coupon-bubble-content {
         display: flex;
         flex-direction: column;
         gap: 4px;
     }
 
-    .cashback-usage {
+    .coupon-bubble-content .desc {
+        opacity: 0.6;
+    }
+
+    .coupon-usage {
         background-color: @neutralF5;
         border-radius: 100px;
         display: flex;
@@ -859,25 +868,72 @@ label.icon-button {
         padding: 0;
     }
 
-    .cashback-usage-used {
+    .coupon-usage-used {
         padding: 6px 12px;
         border-radius: 100px;
-        // 50% of the width of the parent
         width: calc((100% - 32px) / 2);
-
-
     }
 
-    .cashback-usage-remaining {
+    .coupon-usage-remaining {
         padding: 6px 12px;
     }
+
+    .coupon-nothing {
+        font-style: italic;
+        color: @neutralGrey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+
+
+
+    .history-item {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid @neutralLightGrey2;
+        padding: 24px 0;
+        margin: 0 16px;
+
+        &:last-of-type {
+            border-bottom: 0;
+        }
+    }
+
+    .history-item-date {
+        margin-top: 4px;
+        color: @neutralGrey;
+    }
+
+    .history-item-chips {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-top: 12px;
+    }
+
+    .history-item-chip {
+        background-color: @neutralWhite;
+        padding: 5px 10px;
+        align-items: center;
+        display: flex;
+        gap: 8px;
+        border-radius: 48px;
+    }
+
+    .history-item-chip-label {
+        color: @neutralGrey;
+    }
+
 
     .camera {
         position: fixed;
         display: flex;
         width: 56px;
         height: 56px;
-        bottom: 85px;
+        bottom: 70px;
         right: 10px;
         border-radius: 56px;
         justify-content: center;
