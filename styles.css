@@ -2,7 +2,7 @@ html {
   font-size: 14px;
 }
 .h1,
-h1-bold {
+.h1-bold {
   font-family: "Lato", "Open Sans", sans-serif;
   font-optical-sizing: auto;
   letter-spacing: -2%;
@@ -176,59 +176,64 @@ label.icon-button {
 .section {
   margin: 0 16px;
 }
-.home {
+.home-page {
   display: flex;
   flex-direction: column;
   gap: 24px;
   padding: 16px 0 82px;
 }
-.home .main-header-wrapper {
+.home-page .main-header-wrapper {
   display: flex;
   justify-content: end;
 }
-.home .section.register {
+.home-page .section.register {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-.home .section.register .tile {
+.home-page .section.register .tile {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.home .section.loyalty-programs {
+.home-page .section.loyalty-programs {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.home .section.loyalty-programs .h3 {
+.home-page .section.loyalty-programs .h3 {
   color: #8c7dee;
 }
-.home .section.loyalty-card {
+.home-page .tile {
+  background-color: #ffffff;
+  padding: 8px;
+  border-radius: 14px;
+}
+.section.loyalty-card {
   display: flex;
   gap: 8px;
   flex-direction: column;
 }
-.home .section.loyalty-card .qr {
+.section.loyalty-card .qr {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 16px;
 }
-.home .section.loyalty-card .qr-desc {
+.section.loyalty-card .qr-desc {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.home .section.loyalty-card .desc {
+.section.loyalty-card .desc {
   display: flex;
   gap: 8px;
   justify-content: space-between;
   align-items: center;
 }
-.home .section.loyalty-card .desc .visits,
-.home .section.loyalty-card .desc .businesses {
+.section.loyalty-card .desc .visits,
+.section.loyalty-card .desc .businesses {
   padding: 12px;
   flex: 1;
   display: flex;
@@ -237,13 +242,8 @@ label.icon-button {
   justify-content: center;
   align-items: center;
 }
-.home .section.loyalty-card .show-businesses {
+.section.loyalty-card .show-businesses {
   margin-top: 16px;
-}
-.home .tile {
-  background-color: #ffffff;
-  padding: 8px;
-  border-radius: 14px;
 }
 .tile {
   background-color: #ffffff;
@@ -708,27 +708,44 @@ label.icon-button {
   align-items: center;
   margin-bottom: 20px;
 }
-.business-item-offers .history-item {
-  display: flex;
-  flex-direction: column;
+.history-item {
   border-bottom: 1px solid #ededed;
   padding: 24px 0;
   margin: 0 16px;
 }
-.business-item-offers .history-item:last-of-type {
+.history-item:last-of-type {
   border-bottom: 0;
 }
-.business-item-offers .history-item-date {
+.history-item-content {
+  display: flex;
+  flex-direction: column;
+}
+.history-item-image {
+  border-radius: 14px;
+  overflow: hidden;
+}
+.history-item-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+.history-item-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.history-item-date {
   margin-top: 4px;
   color: #808080;
 }
-.business-item-offers .history-item-chips {
+.history-item-chips {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
   margin-top: 12px;
 }
-.business-item-offers .history-item-chip {
+.history-item-chip {
   background-color: #ffffff;
   padding: 5px 10px;
   align-items: center;
@@ -736,10 +753,10 @@ label.icon-button {
   gap: 8px;
   border-radius: 48px;
 }
-.business-item-offers .history-item-chip-label {
+.history-item-chip-label {
   color: #808080;
 }
-.business-item-offers .camera {
+.camera {
   position: fixed;
   display: flex;
   width: 56px;
@@ -750,6 +767,31 @@ label.icon-button {
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+}
+.profile {
+  margin-bottom: 70px;
+}
+.profile-logged-user {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 20px 0 40px;
+}
+.profile-logged-user > div {
+  width: 100%;
+  text-align: center;
+}
+.profile-logged-user .button-default {
+  width: 240px;
+  margin-top: 16px;
+}
+.profile-logged-user-email {
+  text-align: center;
+  width: 100%;
+  display: block;
 }
 /**
 * DEMO PURPOUSES
