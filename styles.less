@@ -2,9 +2,10 @@
 @neutralGrey: #808080;
 @neutralLightGrey: #cac7c4;
 @neutralLightGrey2: #ededed;
-@neutralC7: #c7c4ca;
+@neutralBorders: #c7c4ca;
 @neutralF5: #f5f5f5;
 @neutralWhite: #ffffff;
+
 
 @lilac: #8c7dee;
 @lilacLight: #efeefb;
@@ -116,6 +117,13 @@ html {
 body {
     padding: 0;
     margin: 0;
+}
+
+.input-prefix-icon {
+    padding: 12px;
+    border: 1px solid @neutralBorders;
+    background-color: @neutralF5;
+    border-radius: 12px;
 }
 
 
@@ -956,6 +964,10 @@ label.icon-button {
     color: @neutralGrey;
 }
 
+.history-item-prelink {
+    margin-right: -16px;
+}
+
 
 .camera {
     position: fixed;
@@ -1008,6 +1020,71 @@ label.icon-button {
     width: 100%;
     display: block;
 }
+
+
+
+
+
+
+
+.profile-edit {
+    margin-bottom: 70px;
+}
+
+.profile-edit-title {
+    margin: 16px 0 40px;
+    text-align: center;
+}
+
+.profile-edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 0 16px;
+}
+
+.profile-edit-section {
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+
+    .description {
+        color: @neutralGrey;
+    }
+}
+
+.profile-edit-switch {
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+}
+
+#switch:checked ~ #switch_on {
+    display: block;
+}
+
+#switch:checked ~ #switch_off {
+    display: none;
+}
+
+#switch:checked + label svg#switch_on {
+    display: block;
+}
+
+#switch:checked + label svg#switch_off {
+    display: none;
+}
+
+#switch:not(:checked) + label svg#switch_on {
+    display: none;
+}
+
+#switch:not(:checked) + label svg#switch_off {
+    display: block;
+}
+
+
+
 
 
 

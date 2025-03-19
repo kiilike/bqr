@@ -80,6 +80,12 @@ body {
   padding: 0;
   margin: 0;
 }
+.input-prefix-icon {
+  padding: 12px;
+  border: 1px solid #c7c4ca;
+  background-color: #f5f5f5;
+  border-radius: 12px;
+}
 .logo-container {
   margin-left: 16px;
   font-family: Gabarito;
@@ -756,6 +762,9 @@ label.icon-button {
 .history-item-chip-label {
   color: #808080;
 }
+.history-item-prelink {
+  margin-right: -16px;
+}
 .camera {
   position: fixed;
   display: flex;
@@ -791,6 +800,50 @@ label.icon-button {
 .profile-logged-user-email {
   text-align: center;
   width: 100%;
+  display: block;
+}
+.profile-edit {
+  margin-bottom: 70px;
+}
+.profile-edit-title {
+  margin: 16px 0 40px;
+  text-align: center;
+}
+.profile-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 0 16px;
+}
+.profile-edit-section {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+}
+.profile-edit-section .description {
+  color: #808080;
+}
+.profile-edit-switch {
+  display: flex;
+  justify-content: start;
+  flex-direction: row;
+}
+#switch:checked ~ #switch_on {
+  display: block;
+}
+#switch:checked ~ #switch_off {
+  display: none;
+}
+#switch:checked + label svg#switch_on {
+  display: block;
+}
+#switch:checked + label svg#switch_off {
+  display: none;
+}
+#switch:not(:checked) + label svg#switch_on {
+  display: none;
+}
+#switch:not(:checked) + label svg#switch_off {
   display: block;
 }
 /**

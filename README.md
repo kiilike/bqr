@@ -25,3 +25,4 @@ npx nodemon --ext less --exec "lessc styles.less styles.css"
 1. **SHOP NAV** - bold
 2. **SHOP NAV** - static menu - last item
 3. **How to implement SVG**
+4. **PROFILE - HISTORY - > BUTTON** - icon button or whole element?

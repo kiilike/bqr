@@ -9,123 +9,59 @@
     rel="stylesheet">
 
 <head>
-    <title>Profile</title>
+    <title>Edit profile</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 
 <body>
 
-    <div class="profile">
+    <div class="profile-edit">
 
-        <div class="profile-logged">
-            <div class="profile-logged-user">
-                <div class="h3">Hello👋</div>
-                <div class="h1-bold">
-                    Andrew Zacek
-                </div>
-                <div class="profile-logged-user-email">me@andyzacek.com</div>
-                <button class="button-default"
-                    onclick="window.location.href='profile-edit.html';console.log('edit-profile clicked');">Edit
-                    profile</button>
-            </div>
+
+        <div class="profile-edit-title h1-bold">
+            Edit profile
         </div>
 
 
 
 
-
-
-
-        <div class="section loyalty-card">
-            <div class="tile qr">
-                <div class="qr-image">
-                    <img width="177" height="177" src="https://dummyimage.com/177x177/999/fff" alt="qr" />
-                </div>
-                <div class="qr-desc">
-                    <div class="h3-bold">Your loyalty QR</div>
-                    <div class="text">Show everytime you pay to get a discount</div>
-                </div>
-            </div>
-            <div class="desc">
-                <div class="tile visits">
-                    <div class="h1">23</div>
-                    <div class="desc">Visits</div>
-                </div>
-                <div class="tile businesses">
-                    <div class="h1">4</div>
-                    <div class="desc">Businesses</div>
-                </div>
+        <div class="profile-edit-form">
+            <div class="profile-edit-section">
+                <div class="description">Contact information</div>
+                <input class="input-prefix-icon" type="text" placeholder="Name" value="Andrew Zacek" />
+                <input class="input-prefix-icon" type="text" placeholder="Email" value="me@andyzacek.com" />
             </div>
 
-            <div class="show-businesses">
-                <button class="button-default"
-                    onclick="window.location.href='businesses.html';console.log('show-businesses clicked');">Show
-                    businesses</button>
-            </div>
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-        <!--                          -->
-        <!--          HISTORY         -->
-        <!--                          -->
-        <div class="history">
-            <div class="history-item">
-                <div class="history-item-container">
-                    <div class="history-item-content">
-                        <div class="subh1-bold">Visit</div>
-                        <div class="history-item-date">Friday, Dec 15, 2024 (15:32)</div>
-                    </div>
-                </div>
-                <div class="history-item-chips">
-                    <div class="history-item-chip">
-                        <div class="history-item-chip-label">Acquired</div>
-                        <div class="bold">1 x surprise</div>
-                    </div>
-                    <div class="history-item-chip">
-                        <div class="history-item-chip-label">Credits</div>
-                        <div class="bold">1 x surprise</div>
-                    </div>
-                </div>
+            <div class="profile-edit-section">
+                <div class="description">Personal information</div>
+                <input class="input-prefix-icon" type="text" placeholder="Enter date of birth" value="" />
+                <input class="input-prefix-icon" type="text" placeholder="Gender" value="" />
             </div>
 
-            <div class="history-item">
-                <div class="history-item-wrapper">
-                    <div class="history-item-container">
-                        <div class="history-item-image">
-                            <img width="100%" height="auto" src="https://dummyimage.com/56x56/AE0D21/fff" />
-                        </div>
-                        <div class="history-item-content">
-                            <div class="subh1-bold">Visit</div>
-                            <div class="history-item-date">Sunday, Dec 15, 2024 (15:32)</div>
-                        </div>
-                    </div>
-                    <div class="history-item-prelink icon-button">
-                        <img src="./images/chevron-right.svg" alt="chevron-right" />
-                    </div>
-                </div>
-                <div class="history-item-chips">
-                    <div class="history-item-chip">
-                        <div class="history-item-chip-label">Acquired</div>
-                        <div class="bold">1 x surprise</div>
-                    </div>
-                    <div class="history-item-chip">
-                        <div class="history-item-chip-label">Credits</div>
-                        <div class="bold">1 x surprise</div>
-                    </div>
-                </div>
+            <div class="profile-edit-section profile-edit-switch">
+                <input type="checkbox" id="switch" style="display: none;" />
+                <label for="switch" style="cursor: pointer;">
+                    <svg id="switch_off" width="40" height="20" viewBox="0 0 40 20" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g id="Group 11">
+                            <rect id="Rectangle 3579" width="40" height="20" rx="10" fill="#CAC7C4" />
+                            <rect id="Rectangle 3580" x="2" y="2" width="16" height="16" rx="8" fill="white" />
+                        </g>
+                    </svg>
+                    <svg id="switch_on" width="40" height="20" viewBox="0 0 40 20" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g id="Group 10">
+                            <rect id="Rectangle 3579" width="40" height="20" rx="10" fill="#739877" />
+                            <rect id="Rectangle 3580" x="22" y="2" width="16" height="16" rx="8" fill="white" />
+                        </g>
+                    </svg>
+
+
+                </label>
+                <label for="switch">Sign up for newsletter</label>
             </div>
         </div>
-
 
 
 
