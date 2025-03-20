@@ -60,7 +60,8 @@ html {
 .bold {
   font-weight: 600;
 }
-.text {
+.text,
+input {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-size: 14px;
@@ -81,10 +82,22 @@ body {
   margin: 0;
 }
 .input-prefix-icon {
-  padding: 12px;
+  padding: 12px 12px 12px 40px;
   border: 1px solid #c7c4ca;
   background-color: #f5f5f5;
   border-radius: 12px;
+  width: 100%;
+}
+.input-prefix-icon + svg {
+  display: block;
+  padding: 12px;
+  position: absolute;
+  margin-top: -45px;
+  z-index: 8888;
+  stroke: #808080;
+}
+input:not(:placeholder-shown) + svg {
+  stroke: #232122;
 }
 .logo-container {
   margin-left: 16px;
@@ -120,6 +133,26 @@ label.icon-button {
   padding: 16px;
   display: flex;
   align-items: center;
+}
+.button-text,
+a {
+  padding: 0;
+  color: #8c7dee;
+  font-weight: 600;
+  border: 0;
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 20px;
+}
+.icon-button-round {
+  border: 0;
+  display: inline-block;
+  padding: 8px;
+  align-items: center;
+  border-radius: 104px;
+  backdrop-filter: blur(32px);
+  background-color: #ffffff;
 }
 .navbar-content-header {
   display: flex;
@@ -173,7 +206,7 @@ label.icon-button {
 .menu-item-title-text {
   line-height: 14px;
 }
-.register-socials {
+.socials-wrapper {
   display: flex;
   gap: 8px;
   justify-content: center;
@@ -281,6 +314,9 @@ label.icon-button {
   background-color: #efeefb;
   color: #ffffff;
 }
+.button-default-medium {
+  padding: 12px 20px;
+}
 .button-primary {
   background: #232122;
   color: #ffffff;
@@ -291,14 +327,6 @@ label.icon-button {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(20px);
   background-color: transparent;
-}
-.icon-button-round {
-  display: flex;
-  padding: 8px;
-  align-items: center;
-  border-radius: 104px;
-  backdrop-filter: blur(32px);
-  background-color: #ffffff;
 }
 .button-nav {
   padding: 8px 12px;
@@ -434,17 +462,12 @@ label.icon-button {
   font-weight: 400;
   line-height: normal;
 }
-.businesses .search-img {
-  content: '';
+.businesses .search + img {
   display: block;
-  width: 48px;
-  height: 48px;
+  padding: 12px;
   position: absolute;
   margin-top: -48px;
   z-index: 8888;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .businesses .scanner {
   margin: 16px 16px 0 16px;
@@ -806,7 +829,7 @@ label.icon-button {
   margin-bottom: 70px;
 }
 .profile-edit-title {
-  margin: 16px 0 40px;
+  margin: 0 0 40px;
   text-align: center;
 }
 .profile-edit-form {
@@ -822,6 +845,9 @@ label.icon-button {
 }
 .profile-edit-section .description {
   color: #808080;
+}
+.profile-edit-nav .icon-button-round {
+  margin: 16px;
 }
 .profile-edit-switch {
   display: flex;
@@ -845,6 +871,49 @@ label.icon-button {
 }
 #switch:not(:checked) + label svg#switch_off {
   display: block;
+}
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 80px;
+  height: calc(100vh - 80px);
+}
+.login-header {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 16px 16px 24px;
+}
+.login-form {
+  display: flex;
+  gap: 12px;
+  margin: 0 16px;
+  flex-direction: column;
+}
+.login-header .h2-bold {
+  margin: 0;
+}
+.login-header-description {
+  color: #808080;
+}
+.login-footer {
+  margin: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.login-button {
+  border-radius: 1000px;
+  opacity: 0.5;
+  background: #232122;
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+}
+.login-footer-no-account {
+  text-align: center;
 }
 /**
 * DEMO PURPOUSES

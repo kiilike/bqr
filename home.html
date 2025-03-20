@@ -1,7 +1,7 @@
 <html>
 
 <!-- styles.css -->
-<link rel="stylesheet" type="text/css" href="styles.css?4">
+<link rel="stylesheet" type="text/css" href="styles.css?5">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
@@ -43,7 +43,7 @@
                 <div>
                     Register or login and enjoy the full potential of our loyalty programm
                 </div>
-                <div class="register-socials">
+                <div class="socials-wrapper">
                     <button class="button-social" onclick="console.log('register-google clicked');">
                         <img src="images/flat-color-icons_google.svg" alt="google" width="20" height="20">
                     </button>
@@ -53,7 +53,6 @@
                     <button class="button-social" onclick="console.log('register-email clicked');">
                         <img src="images/mail.svg" alt="email" width="20" height="20">
                     </button>
-
                 </div>
             </div>
 
@@ -145,8 +144,14 @@
 
         <div class="section register">
             <div class="h3">Register or login via</div>
-            <div class="register-socials">
-                <button class="button-social" onclick="console.log('register-google clicked');">
+
+
+            <!--                                      -->
+            <!--          SOCIALS BUTTONS - 3         -->
+            <!--                                      -->
+            <div class="socials-wrapper">
+                <button class="button-social"
+                    onclick="console.log('register-google clicked');window.location.href='login.html';">
                     <img src="images/flat-color-icons_google.svg" alt="google" width="20" height="20">
                 </button>
                 <button class="button-social" onclick="console.log('register-apple clicked');">
@@ -155,7 +160,6 @@
                 <button class="button-social" onclick="console.log('register-email clicked');">
                     <img src="images/mail.svg" alt="email" width="20" height="20">
                 </button>
-
             </div>
         </div>
 

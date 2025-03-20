@@ -9,26 +9,68 @@
     rel="stylesheet">
 
 <head>
-    <title>Profile</title>
+    <title>Edit profile</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 
 <body>
 
-    <div class="profile">
+    <div class="login">
 
-        <div class="profile-logged">
-            <div class="profile-logged-user">
-                <div class="h3">Hello👋</div>
-                <div class="h1-bold">
-                    Andrew Zacek
+
+        <div>
+
+
+            <div class="login-header">
+
+                <h2 class="h2-bold">Log in to your account</h2>
+                <div class="login-header-description">
+                    Log in and enjoy the full potential of our loyalty programme
                 </div>
-                <div class="profile-logged-user-email">me@andyzacek.com</div>
-                <button class="button-default"
-                    onclick="window.location.href='profile-edit.html';console.log('edit-profile clicked');">Edit
-                    profile</button>
+
+
+                <!--                                      -->
+                <!--          SOCIALS BUTTONS - 2         -->
+                <!--                                      -->
+                <div class="socials-wrapper">
+                    <button class="button-social" onclick="console.log('register-google clicked');">
+                        <img src="images/flat-color-icons_google.svg" alt="google" width="20" height="20">
+                    </button>
+                    <button class="button-social" onclick="console.log('register-apple clicked');">
+                        <img src="images/apple.svg" alt="apple" width="20" height="20">
+                    </button>
+                </div>
             </div>
+
+
+
+
+            <div class="login-form">
+                <div class="input-prefix-icon-wrapper">
+                    <input class="input-prefix-icon" type="text" placeholder="Enter your e-mail" value="" />
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="mail-01">
+                            <path id="Icon"
+                                d="M1.66675 5.8335L8.47085 10.5964C9.02182 10.982 9.29731 11.1749 9.59697 11.2496C9.86166 11.3156 10.1385 11.3156 10.4032 11.2496C10.7029 11.1749 10.9783 10.982 11.5293 10.5964L18.3334 5.8335M5.66675 16.6668H14.3334C15.7335 16.6668 16.4336 16.6668 16.9684 16.3943C17.4388 16.1547 17.8212 15.7722 18.0609 15.3018C18.3334 14.767 18.3334 14.067 18.3334 12.6668V7.3335C18.3334 5.93336 18.3334 5.2333 18.0609 4.69852C17.8212 4.22811 17.4388 3.84566 16.9684 3.60598C16.4336 3.3335 15.7335 3.3335 14.3334 3.3335H5.66675C4.26662 3.3335 3.56655 3.3335 3.03177 3.60598C2.56137 3.84566 2.17892 4.22811 1.93923 4.69852C1.66675 5.2333 1.66675 5.93336 1.66675 7.3335V12.6668C1.66675 14.067 1.66675 14.767 1.93923 15.3018C2.17892 15.7722 2.56137 16.1547 3.03177 16.3943C3.56655 16.6668 4.26662 16.6668 5.66675 16.6668Z"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                    </svg>
+
+                </div>
+                <div class="input-prefix-icon-wrapper">
+                    <input class="input-prefix-icon" type="text" placeholder="Email" value="" />
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="key-01">
+                            <path id="Icon"
+                                d="M14.1667 7.49995C14.1667 7.07343 14.0039 6.64691 13.6785 6.32149C13.3531 5.99605 12.9265 5.83333 12.5 5.83333M12.5 12.5C15.2614 12.5 17.5 10.2614 17.5 7.5C17.5 4.73858 15.2614 2.5 12.5 2.5C9.73858 2.5 7.5 4.73858 7.5 7.5C7.5 7.72807 7.51527 7.95256 7.54484 8.17253C7.59348 8.53432 7.6178 8.71521 7.60143 8.82966C7.58438 8.94888 7.56267 9.01312 7.50391 9.11825C7.4475 9.21917 7.34809 9.31857 7.14928 9.51739L2.89052 13.7761C2.7464 13.9203 2.67433 13.9923 2.6228 14.0764C2.57711 14.151 2.54344 14.2323 2.52303 14.3173C2.5 14.4132 2.5 14.5151 2.5 14.719V16.1667C2.5 16.6334 2.5 16.8667 2.59083 17.045C2.67072 17.2018 2.79821 17.3293 2.95501 17.4092C3.13327 17.5 3.36662 17.5 3.83333 17.5H5.83333V15.8333H7.5V14.1667H9.16667L10.4826 12.8507C10.6814 12.6519 10.7808 12.5525 10.8818 12.4961C10.9869 12.4373 11.0511 12.4156 11.1703 12.3986C11.2848 12.3822 11.4657 12.4065 11.8275 12.4552C12.0474 12.4847 12.2719 12.5 12.5 12.5Z"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                    </svg>
+
+                </div>
+            </div>
+
         </div>
 
 
@@ -37,101 +79,20 @@
 
 
 
-        <div class="section loyalty-card">
-            <div class="tile qr">
-                <div class="qr-image">
-                    <img width="177" height="177" src="https://dummyimage.com/177x177/999/fff" alt="qr" />
-                </div>
-                <div class="qr-desc">
-                    <div class="h3-bold">Your loyalty QR</div>
-                    <div class="text">Show everytime you pay to get a discount</div>
-                </div>
-            </div>
-            <div class="desc">
-                <div class="tile visits">
-                    <div class="h1">23</div>
-                    <div class="desc">Visits</div>
-                </div>
-                <div class="tile businesses">
-                    <div class="h1">4</div>
-                    <div class="desc">Businesses</div>
-                </div>
+        <div class="login-footer">
+            <button class="button-default button-default-medium login-button"
+                onclick="console.log('login clicked');window.location.href='home.html';">Log
+                in</button>
+
+            <button class="button-text">
+                Forgot your password?
+            </button>
+
+            <div class="login-footer-no-account">
+                Don't have an account? <a href="register.html">Register now</a>
             </div>
 
-            <div class="show-businesses">
-                <button class="button-default"
-                    onclick="window.location.href='businesses.html';console.log('show-businesses clicked');">Show
-                    businesses</button>
-            </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-        <!--                          -->
-        <!--          HISTORY         -->
-        <!--                          -->
-        <div class="history">
-            <div class="history-item">
-                <div class="history-item-container">
-                    <div class="history-item-content">
-                        <div class="subh1-bold">Visit</div>
-                        <div class="history-item-date">Friday, Dec 15, 2024 (15:32)</div>
-                    </div>
-                </div>
-                <div class="history-item-chips">
-                    <div class="history-item-chip">
-                        <div class="history-item-chip-label">Acquired</div>
-                        <div class="bold">1 x surprise</div>
-                    </div>
-                    <div class="history-item-chip">
-                        <div class="history-item-chip-label">Credits</div>
-                        <div class="bold">1 x surprise</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="history-item">
-                <div class="history-item-wrapper">
-                    <div class="history-item-container">
-                        <div class="history-item-image">
-                            <img width="100%" height="auto" src="https://dummyimage.com/56x56/AE0D21/fff" />
-                        </div>
-                        <div class="history-item-content">
-                            <div class="subh1-bold">Visit</div>
-                            <div class="history-item-date">Sunday, Dec 15, 2024 (15:32)</div>
-                        </div>
-                    </div>
-                    <div class="history-item-prelink icon-button">
-                        <img src="./images/chevron-right.svg" alt="chevron-right" />
-                    </div>
-                </div>
-                <div class="history-item-chips">
-                    <div class="history-item-chip">
-                        <div class="history-item-chip-label">Acquired</div>
-                        <div class="bold">1 x surprise</div>
-                    </div>
-                    <div class="history-item-chip">
-                        <div class="history-item-chip-label">Credits</div>
-                        <div class="bold">1 x surprise</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-
-
 
 
 
