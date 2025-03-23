@@ -1,7 +1,7 @@
 <html>
 
 <!-- styles.css -->
-<link rel="stylesheet" type="text/css" href="styles.css?5">
+<link rel="stylesheet" type="text/css" href="styles.css?6">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
@@ -35,11 +35,12 @@
     <!--                                   -->
     <!--          CAMERA POPUP #1          -->
     <!--                                   -->
-
+    <!-- REMOVE 2 onclicks! -->
     <div class="popup" onclick="window.location.href='business-item.html'">
         <div class="popup-content">
+            <!-- onclick to modal-info.html and stop propagation -->
             <div class="popup-desc">
-                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width=" 24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="chevron-down">
                         <path id="Icon" d="M6 9.5L12 15.5L18 9.5" stroke="white" stroke-width="1.5"
                             stroke-linecap="round" stroke-linejoin="round" />
@@ -50,7 +51,7 @@
                     Show to the staff before paying
                 </div>
             </div>
-            <div class="popup-square"></div>
+            <div class="popup-square" onclick="window.location.href='modal-info.html'; event.stopPropagation();"></div>
             <div class="popup-bottom">
                 You can only use your credit if your current account balance is less than your credit amount
             </div>
