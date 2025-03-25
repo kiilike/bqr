@@ -16,42 +16,39 @@
 
 <body>
 
-    <div class="profile-edit">
+    <div class="login">
 
 
-
-        <!--                                -->
-        <!--          BACK BUTTON #1        -->
-        <!--                                -->
-        <div class="profile-edit-nav">
-            <button class="icon-button-round distinct"
-                onclick="console.log('back clicked');window.location.href='profile.html';">
-                <img src="images/arrow-narrow-left.svg" alt="back" width="24" height="24" />
-            </button>
-        </div>
-
-        <div class="profile-edit-title h1-bold">
-            Edit profile
-        </div>
+        <div>
 
 
+            <div class="login-header">
 
-
-        <div class="profile-edit-form">
-            <div class="profile-edit-section">
-                <div class="description">Contact information</div>
-                <div class="input-prefix-icon-wrapper">
-                    <input class="input-prefix-icon" type="text" placeholder="Name" value="Andrew Zacek" />
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g id="user-01">
-                            <path id="Icon"
-                                d="M16.6666 17.5C16.6666 16.337 16.6666 15.7555 16.5231 15.2824C16.1999 14.217 15.3662 13.3834 14.3009 13.0602C13.8277 12.9167 13.2462 12.9167 12.0832 12.9167H7.91659C6.75362 12.9167 6.17213 12.9167 5.69897 13.0602C4.63363 13.3834 3.79995 14.217 3.47678 15.2824C3.33325 15.7555 3.33325 16.337 3.33325 17.5M13.7499 6.25C13.7499 8.32107 12.071 10 9.99992 10C7.92885 10 6.24992 8.32107 6.24992 6.25C6.24992 4.17893 7.92885 2.5 9.99992 2.5C12.071 2.5 13.7499 4.17893 13.7499 6.25Z"
-                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </g>
-                    </svg>
+                <h2 class="h2-bold">Log in to your account</h2>
+                <div class="login-header-description">
+                    Log in and enjoy the full potential of our loyalty programme
                 </div>
+
+
+                <!--                                      -->
+                <!--          SOCIALS BUTTONS - 2         -->
+                <!--                                      -->
+                <div class="socials-wrapper">
+                    <button class="button-social" onclick="console.log('register-google clicked');">
+                        <img src="images/flat-color-icons_google.svg" alt="google" width="20" height="20">
+                    </button>
+                    <button class="button-social" onclick="console.log('register-apple clicked');">
+                        <img src="images/apple.svg" alt="apple" width="20" height="20">
+                    </button>
+                </div>
+            </div>
+
+
+
+
+            <div class="login-form">
                 <div class="input-prefix-icon-wrapper">
-                    <input class="input-prefix-icon" type="text" placeholder="Email" value="me@andyzacek.com" />
+                    <input class="input-prefix-icon" type="text" placeholder="Enter your e-mail" value="" />
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g id="mail-01">
                             <path id="Icon"
@@ -59,28 +56,15 @@
                                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </g>
                     </svg>
-                </div>
-            </div>
 
-            <div class="profile-edit-section">
-                <div class="description">Personal information</div>
-                <div>
-                    <input class="input-prefix-icon" type="text" placeholder="Enter date of birth" value="" />
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g id="calendar-date">
-                            <path id="Icon"
-                                d="M17.5 8.33317H2.5M13.3333 1.6665V4.99984M6.66667 1.6665V4.99984M8.75 11.6665L10 10.8332V14.9998M8.95833 14.9998H11.0417M6.5 18.3332H13.5C14.9001 18.3332 15.6002 18.3332 16.135 18.0607C16.6054 17.821 16.9878 17.4386 17.2275 16.9681C17.5 16.4334 17.5 15.7333 17.5 14.3332V7.33317C17.5 5.93304 17.5 5.23297 17.2275 4.69819C16.9878 4.22779 16.6054 3.84534 16.135 3.60565C15.6002 3.33317 14.9001 3.33317 13.5 3.33317H6.5C5.09987 3.33317 4.3998 3.33317 3.86502 3.60565C3.39462 3.84534 3.01217 4.22779 2.77248 4.69819C2.5 5.23297 2.5 5.93304 2.5 7.33317V14.3332C2.5 15.7333 2.5 16.4334 2.77248 16.9681C3.01217 17.4386 3.39462 17.821 3.86502 18.0607C4.3998 18.3332 5.09987 18.3332 6.5 18.3332Z"
-                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </g>
-                    </svg>
                 </div>
-                <div>
-
-                    <input class="input-prefix-icon" type="text" placeholder="Gender" value="" />
+                <div class="input-prefix-icon-wrapper">
+                    <input type="password" class="input-prefix-icon" type="text" placeholder="Enter your password"
+                        value="" />
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g id="user-01">
+                        <g id="key-01">
                             <path id="Icon"
-                                d="M16.6666 17.5C16.6666 16.337 16.6666 15.7555 16.5231 15.2824C16.1999 14.217 15.3662 13.3834 14.3009 13.0602C13.8277 12.9167 13.2462 12.9167 12.0832 12.9167H7.91659C6.75362 12.9167 6.17213 12.9167 5.69897 13.0602C4.63363 13.3834 3.79995 14.217 3.47678 15.2824C3.33325 15.7555 3.33325 16.337 3.33325 17.5M13.7499 6.25C13.7499 8.32107 12.071 10 9.99992 10C7.92885 10 6.24992 8.32107 6.24992 6.25C6.24992 4.17893 7.92885 2.5 9.99992 2.5C12.071 2.5 13.7499 4.17893 13.7499 6.25Z"
+                                d="M14.1667 7.49995C14.1667 7.07343 14.0039 6.64691 13.6785 6.32149C13.3531 5.99605 12.9265 5.83333 12.5 5.83333M12.5 12.5C15.2614 12.5 17.5 10.2614 17.5 7.5C17.5 4.73858 15.2614 2.5 12.5 2.5C9.73858 2.5 7.5 4.73858 7.5 7.5C7.5 7.72807 7.51527 7.95256 7.54484 8.17253C7.59348 8.53432 7.6178 8.71521 7.60143 8.82966C7.58438 8.94888 7.56267 9.01312 7.50391 9.11825C7.4475 9.21917 7.34809 9.31857 7.14928 9.51739L2.89052 13.7761C2.7464 13.9203 2.67433 13.9923 2.6228 14.0764C2.57711 14.151 2.54344 14.2323 2.52303 14.3173C2.5 14.4132 2.5 14.5151 2.5 14.719V16.1667C2.5 16.6334 2.5 16.8667 2.59083 17.045C2.67072 17.2018 2.79821 17.3293 2.95501 17.4092C3.13327 17.5 3.36662 17.5 3.83333 17.5H5.83333V15.8333H7.5V14.1667H9.16667L10.4826 12.8507C10.6814 12.6519 10.7808 12.5525 10.8818 12.4961C10.9869 12.4373 11.0511 12.4156 11.1703 12.3986C11.2848 12.3822 11.4657 12.4065 11.8275 12.4552C12.0474 12.4847 12.2719 12.5 12.5 12.5Z"
                                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </g>
                     </svg>
@@ -88,28 +72,6 @@
                 </div>
             </div>
 
-            <div class="profile-edit-section profile-edit-switch">
-                <input type="checkbox" id="switch" style="display: none;" />
-                <label for="switch" style="cursor: pointer;">
-                    <svg id="switch_off" width="40" height="20" viewBox="0 0 40 20" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <g id="Group 11">
-                            <rect id="Rectangle 3579" width="40" height="20" rx="10" fill="#CAC7C4" />
-                            <rect id="Rectangle 3580" x="2" y="2" width="16" height="16" rx="8" fill="white" />
-                        </g>
-                    </svg>
-                    <svg id="switch_on" width="40" height="20" viewBox="0 0 40 20" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <g id="Group 10">
-                            <rect id="Rectangle 3579" width="40" height="20" rx="10" fill="#739877" />
-                            <rect id="Rectangle 3580" x="22" y="2" width="16" height="16" rx="8" fill="white" />
-                        </g>
-                    </svg>
-
-
-                </label>
-                <label for="switch">Sign up for newsletter</label>
-            </div>
         </div>
 
 
@@ -117,6 +79,20 @@
 
 
 
+        <!--                                    -->
+        <!--          BOTTOM ACTIONS #1         -->
+        <!--                                    -->
+        <div class="login-footer">
+            <button class="button-default button-default-medium login-button"
+                onclick="console.log('login clicked');window.location.href='home.html';">Log
+                in</button>
+            <button class="button-text">
+                Forgot your password?
+            </button>
+            <div class="login-footer-no-account">
+                Don't have an account? <a href="profile-register.html">Register now</a>
+            </div>
+        </div>
 
 
 

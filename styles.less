@@ -6,6 +6,7 @@
 @neutralF5: #f5f5f5;
 @neutralWhite: #ffffff;
 @additionalDanger: #BA1600;
+@additionalSuccess: #06960D;
 
 @lilac: #8c7dee;
 @lilacLight: #efeefb;
@@ -130,6 +131,16 @@ body {
     background-color: @neutralF5;
     border-radius: 12px;
     width: 100%;
+
+    &.success {
+
+        border-color: @additionalSuccess;
+    }
+
+    &.error {
+        color: @additionalDanger;
+        border-color: @additionalDanger;
+    }
 }
 
 .input-prefix-icon + svg {
@@ -143,6 +154,12 @@ body {
 
 input:not(:placeholder-shown) + svg {
     stroke: @neutralBlack;
+}
+
+.error-message {
+    color: @additionalDanger;
+    text-align: right;
+    margin-top: 6px;
 }
 
 
@@ -207,8 +224,14 @@ a {
     align-items: center;
     border-radius: 104px;
     backdrop-filter: blur(32px);
-    background-color: @neutralWhite;
+    background-color: transparent;
+
+    &.distinct {
+        background-color: @neutralWhite;
+    }
 }
+
+
 
 
 
@@ -328,12 +351,6 @@ a {
 
 
     }
-
-    .tile {
-        background-color: @tile-bg;
-        padding: 8px;
-        border-radius: 14px;
-    }
 }
 
 
@@ -383,7 +400,9 @@ a {
 
 .tile {
     background-color: @neutralWhite;
-    border-radius: 14px
+    border-radius: 14px;
+    padding: 8px;
+
 }
 
 .button-social {
@@ -403,7 +422,7 @@ a {
     font-size: 14px;
     border-radius: 1000px;
     padding: 20px;
-    border: 1px solid @neutralLightGrey;
+    border: 1px solid @neutralBlack;
     background-color: @neutralF5;
     backdrop-filter: blur(10px);
     width: 100%;
@@ -412,6 +431,12 @@ a {
     &.selected {
         background-color: @lilacLight;
         color: @neutralWhite;
+    }
+
+    &:disabled {
+        background-color: @neutralBlack;
+        color: @neutralWhite;
+        opacity: 0.5;
     }
 }
 
