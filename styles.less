@@ -5,10 +5,11 @@
 @neutralBorders: #c7c4ca;
 @neutralF5: #f5f5f5;
 @neutralWhite: #ffffff;
-@additionalDanger: #BA1600;
-@additionalSuccess: #06960D;
+@additionalDanger: #ba1600;
+@additionalSuccess: #06960d;
 
 @lilac: #8c7dee;
+@lilacContrast: #574aae;
 @lilacLight: #efeefb;
 
 @base-font-size: 14px;
@@ -279,6 +280,30 @@ a {
     align-items: center;
     list-style-type: none;
     border-bottom: 1px solid @neutralLightGrey2;
+
+    svg {
+        fill: @neutralLightGrey;
+    }
+
+    &.selected {
+        color: @lilacContrast;
+
+        .menu-item-title svg {
+            stroke: @lilacContrast;
+            fill: transparent;
+        }
+
+        svg {
+            fill: @lilacContrast;
+        }
+    }
+
+    &-language {
+        svg {
+            fill: none;
+            stroke: @neutralBlack;
+        }
+    }
 }
 
 .menu .menu-item:nth-last-of-type(1) {
