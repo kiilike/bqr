@@ -34,3 +34,12 @@ npx nodemon --ext less --exec "lessc styles.less styles.css --clean-css"
 4. **PROFILE - HISTORY - > BUTTON** - icon button or whole element?
 5. **WHAT** LINK TO profile-login.html?
 6. **Preco** v register forme nie je back button biely?
+
+### Fonts
+
+LATO nema dobre makcene,
+u nas v robte je kombinacia Gilroy/Inter
+
+logo: Gabarito - 500
+h1,h2: Gilroy, "Open Sans", sans-serif; - 400,600
+text: "Inter", sans-serif; - 400,600
