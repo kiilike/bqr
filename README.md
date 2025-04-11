@@ -41,5 +41,5 @@ LATO nema dobre makcene,
 u nas v robte je kombinaciaLato/Inter
 
 logo: Gabarito - 500
-h1,h2:Lato, "Open Sans", sans-serif; - 400,600
+h1,h2:Lato, - 400,600
 text: "Inter", sans-serif; - 400,600
