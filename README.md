@@ -38,8 +38,8 @@ npx nodemon --ext less --exec "lessc styles.less styles.css --clean-css"
 ### Fonts
 
 LATO nema dobre makcene,
-u nas v robte je kombinacia Gilroy/Inter
+u nas v robte je kombinaciaLato/Inter
 
 logo: Gabarito - 500
-h1,h2: Gilroy, "Open Sans", sans-serif; - 400,600
+h1,h2:Lato, "Open Sans", sans-serif; - 400,600
 text: "Inter", sans-serif; - 400,600
