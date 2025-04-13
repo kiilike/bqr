@@ -1,0 +1,171 @@
+<html>
+
+<!-- styles.css -->
+<link rel="stylesheet" type="text/css" href="styles.css?10">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500&family=Lato:wght@400;600&family=Inter:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet">
+
+<head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+
+
+
+    <div>RANDOM NON VISIBLE CONTENT</div>
+
+
+
+    <div class="navbar">
+        <div id="menu-main" class="navbar-content" style="display: block;transform: translateY(0);">
+
+
+            <div class="navbar-inner">
+                <div class="navbar-inner-upper">
+
+                    <div class="navbar-content-header">
+                        <div class="logo-container">
+                            <img src="images/logo.svg" alt="logo" width="32" height="32">
+                            <div>BONUS QR</div>
+                        </div>
+
+                        <div for="navbar" class="icon-button" onclick="window.location.href='home.html';">
+                            <img id="navbar-close" src="images/x-close.svg" alt="menu" width="24" height="24">
+                        </div>
+                    </div>
+
+
+
+                    <div class="navbar-register" style="display:none;">
+                        <div class="h2-bold">Register or login</div>
+                        <div>
+                            Register or login and enjoy the full potential of our loyalty programm
+                        </div>
+                        <!--                                        -->
+                        <!--          SOCIALS BUTTONS - 1/3         -->
+                        <!--                                        -->
+                        <div class="socials-wrapper">
+                            <button class="button-social" onclick="console.log('register-google clicked');">
+                                <img src="images/flat-color-icons_google.svg" alt="google" width="20" height="20">
+                            </button>
+                            <button class="button-social" onclick="console.log('register-apple clicked');">
+                                <img src="images/apple.svg" alt="apple" width="20" height="20">
+                            </button>
+                            <button class="button-social" onclick="console.log('register-email clicked');">
+                                <img src="images/mail.svg" alt="email" width="20" height="20">
+                            </button>
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="navbar-logged">
+                        <div class="navbar-logged-avatar">
+                            <img class="navbar-logged-user" src="https://dummyimage.com/100x100/000/fff" alt="user" />
+                        </div>
+                    </div>
+
+
+                    <div class="menu">
+                        <!--                           -->
+                        <!--          MENU 1/2         -->
+                        <!-- with .menu-item and dot   -->
+                        <!--                           -->
+                        <!-- Dolezita je class SELECTED na menu-item -->
+                        <div class="desc menu-label">
+                            Menu
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-title">
+                                <img src="images/home.svg" alt="home" width="20" height="20">
+                                <div class="menu-item-title-text">Home</div>
+                            </div>
+                            <div>
+                                <svg width="5" height="6" viewBox="0 0 5 6" xmlns="http://www.w3.org/2000/svg">
+                                    <circle id="Ellipse 13" cx="2.5" cy="2.5" r="2.5"
+                                        transform="matrix(-1 0 0 1 5 0.5)" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-title">
+                                <img src="images/map.svg" alt="home" width="20" height="20">
+                                <div class="menu-item-title-text">Businesses</div>
+                            </div>
+                            <div>
+                                <svg width="5" height="6" viewBox="0 0 5 6" xmlns="http://www.w3.org/2000/svg">
+                                    <circle id="Ellipse 13" cx="2.5" cy="2.5" r="2.5"
+                                        transform="matrix(-1 0 0 1 5 0.5)" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-title">
+                                <img src="images/user.svg" alt="home" width="20" height="20">
+                                <div class="menu-item-title-text">Profile</div>
+                            </div>
+                            <div>
+                                <svg width="5" height="6" viewBox="0 0 5 6" xmlns="http://www.w3.org/2000/svg">
+                                    <circle id="Ellipse 13" cx="2.5" cy="2.5" r="2.5"
+                                        transform="matrix(-1 0 0 1 5 0.5)" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-title" onclick="window.location.href='profile.html';">
+                                <img src="images/log-out.svg" alt="home" width="20" height="20">
+                                <div class="menu-item-title-text">Sign out</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--                                 -->
+                    <!--          MENU/ITEMS 2/2         -->
+                    <!-- with .menu-item-language and >  -->
+                    <!--                                 -->
+                    <div class="menu">
+                        <div class="desc menu-label">
+                            Language
+                        </div>
+                        <div class="menu-item menu-item-language" onclick="window.location.href='home1.html';">
+                            <div class="menu-item-title">
+                                <img src="images/globe.svg" alt="home" width="20" height="20">
+                                <div class="menu-item-title-text">English</div>
+                            </div>
+                            <div>
+                                <!-- chevron-right.svg -->
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g id="chevron-right">
+                                        <path id="Icon" d="M7.5 15L12.5 10L7.5 5" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="navbar-inner-lower">
+                    <button class="navbar-delete-personals button-text error">Delete personal data</button>
+                    <div class="navbar-copyright">Copyright ©2025 BonusQR.com. All rights reserved</div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+</body>
+
+</html>

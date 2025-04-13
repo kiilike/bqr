@@ -214,6 +214,10 @@ a {
     text-decoration: none;
     font-size: 14px;
     line-height: 20px;
+
+    &.error {
+        color: @additionalDanger;
+    }
 }
 
 
@@ -263,6 +267,43 @@ a {
     gap: 8px;
 }
 
+.navbar-copyright {
+    padding: 16px 0;
+    text-align: center;
+    color: @neutralGrey;
+}
+
+.navbar-delete-personals {
+    text-align: center;
+    width: 100%;
+    padding: 8px 0;
+}
+
+.navbar-logged-avatar {
+    margin-top: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        border-radius: 50px;
+        overflow: hidden;
+    }
+}
+
+.navbar-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+w .menu-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
 
 .menu {
     margin-top: 40px;
@@ -1340,6 +1381,7 @@ a {
     flex-direction: column;
     justify-content: space-between;
     padding-bottom: 80px;
+    gap: 40px;
     height: calc(100vh - 80px);
 }
 

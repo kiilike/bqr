@@ -43,7 +43,6 @@
 
 
 
-
             <div class="navbar-register">
                 <div class="h2-bold">Register or login</div>
                 <div>
@@ -51,27 +50,30 @@
                 </div>
 
                 <!--                                      -->
-                <!--          SOCIALS BUTTONS - 3         -->
+                <!--          SOCIALS BUTTONS - 3/3         -->
                 <!--                                      -->
                 <div class="socials-wrapper">
-                    <button class="button-social" onclick="console.log('register-google clicked');">
+                    <button class="button-social"
+                        onclick="console.log('register-google clicked');window.location.href='home-logged.html';">
                         <img src="images/flat-color-icons_google.svg" alt="google" width="20" height="20">
                     </button>
-                    <button class="button-social" onclick="console.log('register-apple clicked');">
+                    <button class="button-social"
+                        onclick="console.log('register-apple clicked');window.location.href='home-logged.html';">
                         <img src="images/apple.svg" alt="apple" width="20" height="20">
                     </button>
-                    <button class="button-social" onclick="console.log('register-email clicked');">
+                    <button class="button-social"
+                        onclick="console.log('register-email clicked');window.location.href='home-logged.html';">
                         <img src="images/mail.svg" alt="email" width="20" height="20">
                     </button>
                 </div>
             </div>
 
-
             <!--                           -->
             <!--          MENU 1/2         -->
-            <!--          with dot         -->
+            <!-- with .menu-item and dot   -->
             <!--                           -->
             <!-- Dolezita je class SELECTED na menu-item -->
+            <!-- nadbytocne onclick, presmerovanie otvorene menu ak je user prihlaseny -->
             <div class="menu">
                 <div class="desc menu-label">
                     Menu
@@ -120,14 +122,13 @@
                         </svg>
                     </div>
                 </div>
+
             </div>
 
-
-            <!--                          -->
-            <!--          MENU 2/2        -->
-            <!--         with arrow       -->
-            <!--                          -->
-            <!-- Dolezita je class SELECTED na menu-item -->
+            <!--                                 -->
+            <!--          MENU/ITEMS 2/2         -->
+            <!-- with .menu-item-language and >  -->
+            <!--                                 -->
             <div class="menu">
                 <div class="desc menu-label">
                     Language
@@ -145,7 +146,6 @@
                                     stroke-linejoin="round" />
                             </g>
                         </svg>
-
                     </div>
                 </div>
 
@@ -171,9 +171,9 @@
             <div class="h3">Register or login via</div>
 
 
-            <!--                                      -->
-            <!--          SOCIALS BUTTONS - 3         -->
-            <!--                                      -->
+            <!--                                        -->
+            <!--          SOCIALS BUTTONS - 3/3         -->
+            <!--                                        -->
             <div class="socials-wrapper">
                 <button class="button-social"
                     onclick="console.log('register-google clicked');window.location.href='profile-login.html';">
@@ -292,116 +292,7 @@
 
 
 
-    <!--                                   -->
-    <!--          LANGUAGES OVERLAY        -->
-    <!--                                   -->
-    <div class="language-overlay">
-        <div class="language-content">
-            <div class="menu">
-                <div class="menu-header">
-                    <div class="desc menu-label">
-                        Change language
-                    </div>
-                    <div class="icon-button">
-                        <img id="navbar-close" src="images/x-close.svg" alt="menu" width="24" height="24">
-                    </div>
-                </div>
-                <div class="menu-items">
-                    <div class="menu-item">
-                        <div class="menu-item-title">
-                            <img src="images/lang/en.svg" alt="home" width="21.33" height="16">
-                            <div class="menu-item-title-text">English</div>
-                        </div>
-                        <div>
-                            o
-                        </div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="menu-item-title">
-                            <img src="images/lang/sk.svg" alt="home" width="21.33" height="16">
-                            <div class="menu-item-title-text">Slovenčina</div>
-                        </div>
-                        <div>
-                            o
-                        </div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="menu-item-title">
-                            <img src="images/lang/cz.svg" alt="home" width="21.33" height="16">
-                            <div class="menu-item-title-text">Čeština</div>
-                        </div>
-                        <div>
-                            o
-                        </div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="menu-item-title">
-                            <img src="images/lang/de.svg" alt="home" width="21.33" height="16">
-                            <div class="menu-item-title-text">Deutsch</div>
-                        </div>
-                        <div>
-                            o
-                        </div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="menu-item-title">
-                            <img src="images/lang/es.svg" alt="home" width="21.33" height="16">
-                            <div class="menu-item-title-text">Español</div>
-                        </div>
-                        <div>
-                            o
-                        </div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="menu-item-title">
-                            <img src="images/lang/fr.svg" alt="home" width="21.33" height="16">
-                            <div class="menu-item-title-text">Français</div>
-                        </div>
-                        <div>
-                            o
-                        </div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="menu-item-title">
-                            <img src="images/lang/pl.svg" alt="home" width="21.33" height="16">
-                            <div class="menu-item-title-text">Polski</div>
-                        </div>
-                        <div>
-                            o
-                        </div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="menu-item-title">
-                            <img src="images/lang/hu.svg" alt="home" width="21.33" height="16">
-                            <div class="menu-item-title-text">Magyar</div>
-                        </div>
-                        <div>
-                            o
-                        </div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="menu-item-title">
-                            <img src="images/lang/it.svg" alt="home" width="21.33" height="16">
-                            <div class="menu-item-title-text">Italiano</div>
-                        </div>
-                        <div>
-                            o
-                        </div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="menu-item-title">
-                            <img src="images/lang/hr.svg" alt="home" width="21.33" height="16">
-                            <div class="menu-item-title-text">Hrvatski</div>
-                        </div>
-                        <div>
-                            o
-                        </div>
-                    </div>
-                </div>
 
-            </div>
-        </div>
-    </div>
 
 </body>
 
