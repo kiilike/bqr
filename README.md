@@ -37,8 +37,7 @@ npx nodemon --ext less --exec "lessc styles.less styles.css --clean-css"
 
 ### Fonts
 
-LATO nema dobre makcene,
-u nas v robte je kombinaciaLato/Inter
+LATO nema dobre makcene
 
 logo: Gabarito - 500
 h1,h2:Lato, - 400,600
